@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Skill2Biz - Converting Skills into Business Opportunities</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f6f1ff;
+  color:#27213b;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#5b2c83,#8e44ad);
+  color:white;
+  text-align:center;
+  padding:35px 18px;
+}
+
+.logo{
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+header h1{
+  font-size:28px;
+}
+
+header p{
+  margin-top:8px;
+  font-size:15px;
+}
+
+.lang{
+  margin-top:18px;
+}
+
+.lang button{
+  border:none;
+  padding:9px 15px;
+  margin:3px;
+  border-radius:20px;
+  cursor:pointer;
+  background:white;
+  color:#5b2c83;
+  font-weight:bold;
+}
+
+nav{
+  background:white;
+  padding:12px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 2px 10px #ddd;
+}
+
+nav a{
+  color:#5b2c83;
+  text-decoration:none;
+  margin:6px;
+  font-weight:bold;
+  font-size:13px;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px;
+}
+
+section{
+  background:white;
+  margin:20px 0;
+  padding:25px 20px;
+  border-radius:18px;
+  box-shadow:0 5px 18px rgba(60,30,90,0.12);
+}
+
+h2{
+  color:#5b2c83;
+  margin-bottom:15px;
+}
+
+.subtitle{
+  color:#666;
+  margin-bottom:15px;
+}
+
+label{
+  display:block;
+  font-weight:bold;
+  margin-top:14px;
+  margin-bottom:5px;
+}
+
+select,
+input{
+  width:100%;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.main-btn{
+  width:100%;
+  margin-top:20px;
+  padding:14px;
+  border:none;
+  border-radius:12px;
+  background:#6c3483;
+  color:white;
+  font-size:17px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.main-btn:hover{
+  background:#51256a;
+}
+
+.result{
+  display:none;
+  margin-top:20px;
+  padding:20px;
+  border-radius:15px;
+  background:#f4eafa;
+  border-left:5px solid #6c3483;
+}
+
+.idea-card{
+  background:white;
+  padding:18px;
+  margin-top:12px;
+  border-radius:12px;
+  box-shadow:0 3px 10px #ddd;
+}
+
+.idea-card h3{
+  color:#6c3483;
+}
+
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:12px;
+}
+
+.feature{
+  padding:18px;
+  background:#faf7ff;
+  border-radius:14px;
+  text-align:center;
+}
+
+.feature span{
+  font-size:30px;
+}
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+}
+
+.flow-box{
+  background:#6c3483;
+  color:white;
+  padding:10px 14px;
+  border-radius:10px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.arrow{
+  font-size:22px;
+  color:#6c3483;
+}
+
+.warning{
+  background:#fff4d6;
+  border-left:5px solid #f39c12;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.safe{
+  background:#e9f8ef;
+  border-left:5px solid #27ae60;
+  padding:15px;
+  border-radius:10px;
+  margin-top:15px;
+}
+
+.roadmap{
+  display:grid;
+  gap:10px;
+}
+
+.step{
+  padding:14px;
+  background:#f7f0fb;
+  border-radius:10px;
+  font-weight:bold;
+}
+
+footer{
+  text-align:center;
+  background:#382047;
+  color:white;
+  padding:25px;
+  margin-top:30px;
+}
+
+.small{
+  font-size:13px;
+  color:#777;
+  margin-top:10px;
+}
+
+@media(max-width:600px){
+  header h1{
+    font-size:23px;
+  }
+
+  .logo{
+    font-size:32px;
+  }
+
+  section{
+    padding:20px 15px;
+  }
+
+  nav a{
+    display:inline-block;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">💡 Skill2Biz</div>
+
+  <h1>Converting Skills into Business Opportunities</h1>
+
+  <p>
+    Turn your skills into practical business ideas with transparent pricing.
+  </p>
+
+  <div class="lang">
+    <button onclick="setLanguage('en')">English</button>
+    <button onclick="setLanguage('mr')">मराठी</button>
+  </div>
+
+</header>
+
+<nav>
+  <a href="#home">Home</a>
+  <a href="#find">Find Business</a>
+  <a href="#calculator">Calculator</a>
+  <a href="#trust">Trust Check</a>
+  <a href="#roadmap">Roadmap</a>
+</nav>
+
+<div class="container">
+
+<!-- HOME -->
+
+<section id="home">
+
+<h2>🌟 What is Skill2Biz?</h2>
+
+<p>
+Skill2Biz is a business guidance platform that helps beginners,
+students and skilled individuals convert their existing skills
+into zero or low-investment business opportunities.
+</p>
+
+<br>
+
+<div class="features">
+
+<div class="feature">
+<span>💡</span>
+<h3>Business Ideas</h3>
+<p>Get ideas according to your skill.</p>
+</div>
+
+<div class="feature">
+<span>💰</span>
+<h3>Pricing</h3>
+<p>Understand product cost and price.</p>
+</div>
+
+<div class="feature">
+<span>📈</span>
+<h3>Profit Estimate</h3>
+<p>Estimate possible profit.</p>
+</div>
+
+<div class="feature">
+<span>🛡️</span>
+<h3>Trust Check</h3>
+<p>Learn common business red flags.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PROBLEM -->
+
+<section>
+
+<h2>❗ Problem</h2>
+
+<p>
+Many people have useful skills but do not know how to convert
+those skills into a business.
+</p>
+
+<ul style="margin:15px 0 0 20px;">
+<li>Lack of practical business guidance</li>
+<li>Difficulty deciding what product to make</li>
+<li>Confusion about pricing</li>
+<li>Difficulty estimating profit</li>
+<li>Risk of suspicious online business schemes</li>
+</ul>
+
+</section>
+
+
+<!-- FIND BUSINESS -->
+
+<section id="find">
+
+<h2>🔍 Find My Business</h2>
+
+<p class="subtitle">
+Enter your details and Skill2Biz will suggest a suitable business idea.
+</p>
+
+<label>🎨 Select Your Skill</label>
+
+<select id="skill">
+
+<option value="">-- Select Skill --</option>
+<option value="crochet">Crochet</option>
+<option value="resin">Resin Art</option>
+<option value="baking">Baking</option>
+<option value="mehendi">Mehendi</option>
+<option value="tailoring">Tailoring</option>
+<option value="drawing">Drawing</option>
+<option value="design">Canva / Designing</option>
+<option value="teaching">Teaching</option>
+<option value="photography">Photography</option>
+<option value="writing">Writing</option>
+
+</select>
+
+
+<label>💰 Available Budget (₹)</label>
+
+<input type="number" id="budget" placeholder="Example: 500">
+
+
+<label>⏰ Available Time</label>
+
+<select id="time">
+
+<option value="low">1–2 hours/day</option>
+<option value="medium">2–4 hours/day</option>
+<option value="high">4+ hours/day</option>
+
+</select>
+
+
+<button class="main-btn" onclick="findBusiness()">
+🚀 Find My Business
+</button>
+
+
+<div id="businessResult" class="result"></div>
+
+</section>
+
+
+<!-- CALCULATOR -->
+
+<section id="calculator">
+
+<h2>🧮 Transparent Pricing Calculator</h2>
+
+<p class="subtitle">
+Enter the actual cost of making one product.
+</p>
+
+
+<label>🧵 Material Cost (₹)</label>
+<input type="number" id="material" placeholder="Example: 100">
+
+
+<label>📦 Packaging Cost (₹)</label>
+<input type="number" id="packaging" placeholder="Example: 20">
+
+
+<label>⏱️ Labour / Time Value (₹)</label>
+<input type="number" id="labour" placeholder="Example: 50">
+
+
+<label>🚚 Other Cost (₹)</label>
+<input type="number" id="other" placeholder="Example: 10">
+
+
+<label>📦 Number of Products</label>
+<input type="number" id="quantity" value="1" min="1">
+
+
+<button class="main-btn" onclick="calculatePrice()">
+🧮 Calculate Price
+</button>
+
+
+<div id="priceResult" class="result"></div>
+
+</section>
+
+
+<!-- PROFIT -->
+
+<section>
+
+<h2>📈 Profit Simulator</h2>
+
+<label>💵 Selling Price per Product (₹)</label>
+<input type="number" id="sellingPrice" placeholder="Example: 250">
+
+
+<label>📦 Number of Products Sold</label>
+<input type="number" id="sold" placeholder="Example: 10">
+
+
+<label>💰 Cost per Product (₹)</label>
+<input type="number" id="costPerProduct" placeholder="Example: 150">
+
+
+<button class="main-btn" onclick="calculateProfit()">
+📊 Calculate Profit
+</button>
+
+<div id="profitResult" class="result"></div>
+
+</section>
+
+
+<!-- TRUST -->
+
+<section id="trust">
+
+<h2>🛡️ Business Trust Check</h2>
+
+<p>
+Before joining an online business opportunity, check for these warning signs:
+</p>
+
+<div class="warning">
+
+<strong>⚠️ Warning Signs</strong>
+
+<ul style="margin-left:20px;">
+<li>Large upfront payment demanded</li>
+<li>Guaranteed income promises</li>
+<li>Unrealistic returns</li>
+<li>Strong pressure to recruit others</li>
+<li>No clear product or service</li>
+</ul>
+
+</div>
+
+<div class="safe">
+
+<strong>✅ Safe Practice</strong>
+
+<p>
+Always verify the business, understand the product/service,
+check the terms and avoid making payments without proper verification.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- FLOW -->
+
+<section>
+
+<h2>🔄 How Skill2Biz Works</h2>
+
+<div class="flow">
+
+<div class="flow-box">👤 User</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">🎨 Skill</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">💰 Budget</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">💡 Idea</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">🧮 Pricing</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">📈 Profit</div>
+<div class="arrow">→</div>
+
+<div class="flow-box">🛡️ Trust</div>
+
+</div>
+
+</section>
+
+
+<!-- ROADMAP -->
+
+<section id="roadmap">
+
+<h2>🚀 Business Roadmap</h2>
+
+<div class="roadmap">
+
+<div class="step">1️⃣ Identify Your Skill</div>
+
+<div class="step">2️⃣ Select a Product / Service</div>
+
+<div class="step">3️⃣ Calculate Actual Cost</div>
+
+<div class="step">4️⃣ Set Transparent Price</div>
+
+<div class="step">5️⃣ Create Branding</div>
+
+<div class="step">6️⃣ Promote Your Product</div>
+
+<div class="step">7️⃣ Get Your First Customer</div>
+
+<div class="step">8️⃣ Improve & Grow</div>
+
+</div>
+
+</section>
+
+
+<!-- INNOVATION -->
+
+<section>
+
+<h2>💎 Innovation / USP</h2>
+
+<div class="features">
+
+<div class="feature">
+<span>🎯</span>
+<h3>Personalised</h3>
+<p>Business ideas based on user's skills and resources.</p>
+</div>
+
+<div class="feature">
+<span>🧮</span>
+<h3>Transparent</h3>
+<p>Cost-based pricing and profit estimation.</p>
+</div>
+
+<div class="feature">
+<span>🛡️</span>
+<h3>Awareness</h3>
+<p>Fraud and suspicious-scheme awareness.</p>
+</div>
+
+</div>
+
+<br>
+
+<p style="text-align:center;font-weight:bold;color:#6c3483;">
+"Skill to Business, with Transparent Pricing and Fraud Awareness."
+</p>
+
+</section>
+
+
+<!-- TECHNOLOGY -->
+
+<section>
+
+<h2>💻 Technology Used</h2>
+
+<div class="features">
+
+<div class="feature">
+<span>🌐</span>
+<h3>HTML</h3>
+<p>Website structure</p>
+</div>
+
+<div class="feature">
+<span>🎨</span>
+<h3>CSS</h3>
+<p>Design & responsive layout</p>
+</div>
+
+<div class="feature">
+<span>⚙️</span>
+<h3>JavaScript</h3>
+<p>Interactive calculations & recommendations</p>
+</div>
+
+</div>
+
+<p class="small">
+Future Scope: Python + Database + AI + Mobile Application
+</p>
+
+</section>
+
+
+<!-- FUTURE -->
+
+<section>
+
+<h2>🔮 Future Scope</h2>
+
+<ul style="margin-left:20px;">
+<li>AI-based personalised recommendations</li>
+<li>Marathi + English + other Indian languages</li>
+<li>Mobile application</li>
+<li>Local market price information</li>
+<li>Online selling integration</li>
+<li>Business progress dashboard</li>
+</ul>
+
+</section>
+
+</div>
+
+
+<footer>
+
+<h2 style="color:white;">Skill2Biz 💡</h2>
+
+<p>Converting Skills into Business Opportunities</p>
+
+<p style="margin-top:8px;">
+Avishkar Competition Project Prototype
+</p>
+
+</footer>
+
+
+<script>
+
+/* LANGUAGE */
+
+function setLanguage(lang){
+
+if(lang === "mr"){
+
+alert(
+"Skill2Biz मध्ये तुमच्या कौशल्य, बजेट आणि उपलब्ध वेळेनुसार business idea सुचवला जातो."
+);
+
+}else{
+
+alert(
+"Skill2Biz suggests business ideas based on your skill, budget and available time."
+);
+
+}
+
+}
+
+
+/* BUSINESS RECOMMENDATION */
+
+function findBusiness(){
+
+let skill = document.getElementById("skill").value;
+
+let budget = Number(document.getElementById("budget").value);
+
+let time = document.getElementById("time").value;
+
+let result = document.getElementById("businessResult");
+
+if(skill === ""){
+
+result.style.display="block";
+
+result.innerHTML =
+"<strong>⚠️ Please select your skill first.</strong>";
+
+return;
+
+}
+
+
+let data = {
+
+crochet:{
+name:"Crochet Products",
+product:"Keychains, bookmarks, flowers and small handmade gifts",
+investment:"Low",
+reason:"Your crochet skill can be converted into small handmade products."
+},
+
+resin:{
+name:"Resin Art Business",
+product:"Keychains, bookmarks, name plates and decorative items",
+investment:"Low",
+reason:"Resin art can be used to create customised products."
+},
+
+baking:{
+name:"Home Baking",
+product:"Cupcakes, cookies and small pre-order items",
+investment:"Low",
+reason:"You can start with small pre-orders using available kitchen resources."
+},
+
+mehendi:{
+name:"Mehendi Service",
+product:"Festival, wedding and event mehendi services",
+investment:"Very Low",
+reason:"This service mainly depends on your skill and basic materials."
+},
+
+tailoring:{
+name:"Tailoring Service",
+product:"Alterations, simple stitching and customised clothing",
+investment:"Low",
+reason:"Existing tailoring equipment can reduce starting cost."
+},
+
+drawing:{
+name:"Art & Greeting Cards",
+product:"Custom drawings, cards and illustrations",
+investment:"Low",
+reason:"Your drawing skill can be converted into customised products."
+},
+
+design:{
+name:"Canva Design Service",
+product:"Posters, invitations, menus and social media designs",
+investment:"Very Low",
+reason:"Digital designing can be started with an existing smartphone."
+},
+
+teaching:{
+name:"Tutoring Service",
+product:"School subject tutoring",
+investment:"Very Low",
+reason:"Teaching mainly requires knowledge, time and communication skills."
+},
+
+photography:{
+name:"Mobile Photography",
+product:"Product photos and basic event photography",
+investment:"Low",
+reason:"A smartphone can be used for basic photography services."
+},
+
+writing:{
+name:"Writing Service",
+product:"Invitations, captions and basic content writing",
+investment:"Very Low",
+reason:"Writing services can be started using existing digital resources."
+}
+
+};
+
+
+let item = data[skill];
+
+let budgetText =
+budget <= 100 ? "Your budget is very limited, so focus on using existing resources."
+:
+budget <= 500 ? "You can consider a low-investment starting option."
+:
+"You have some starting budget for materials and branding.";
+
+
+result.style.display="block";
+
+result.innerHTML = `
+
+<div class="idea-card">
+
+<h3>💡 Recommended: ${item.name}</h3>
+
+<p><strong>Product / Service:</strong> ${item.product}</p>
+
+<p><strong>Investment:</strong> ${item.investment}</p>
+
+<p><strong>Why this idea?</strong> ${item.reason}</p>
+
+<p><strong>Budget Analysis:</strong> ${budgetText}</p>
+
+<p><strong>Available Time:</strong> ${time === "low" ? "1–2 hours/day" : time === "medium" ? "2–4 hours/day" : "4+ hours/day"}</p>
+
+<hr style="margin:15px 0;">
+
+<strong>🚀 Next Step:</strong>
+Calculate your actual product cost below and set a transparent selling price.
+
+</div>
+
+`;
+
+}
+
+
+/* PRICE CALCULATOR */
+
+function calculatePrice(){
+
+let material =
+Number(document.getElementById("material").value) || 0;
+
+let packaging =
+Number(document.getElementById("packaging").value) || 0;
+
+let labour =
+Number(document.getElementById("labour").value) || 0;
+
+let other =
+Number(document.getElementById("other").value) || 0;
+
+let quantity =
+Number(document.getElementById("quantity").value) || 1;
+
+
+let total =
+material + packaging + labour + other;
+
+let perProduct =
+total / quantity;
+
+
+/* Suggested price includes 30% margin as a prototype estimate */
+
+let suggested =
+perProduct * 1.30;
+
+
+let result =
+document.getElementById("priceResult");
+
+result.style.display="block";
+
+result.innerHTML = `
+
+<h3>🧮 Price Breakdown</h3>
+
+<p>Material Cost: ₹${material}</p>
+
+<p>Packaging: ₹${packaging}</p>
+
+<p>Labour / Time: ₹${labour}</p>
+
+<p>Other Cost: ₹${other}</p>
+
+<hr>
+
+<p><strong>Total Cost: ₹${total}</strong></p>
+
+<p><strong>Cost per Product: ₹${perProduct.toFixed(2)}</strong></p>
+
+<p>
+<strong>Suggested Price Range:</strong>
+₹${suggested.toFixed(0)}+
+</p>
+
+<div class="safe">
+
+<strong>💡 Why this price?</strong>
+
+<p>
+The estimate is based on your actual cost inputs plus a
+sample margin. Final pricing should also consider market demand,
+quality and competitor prices.
+</p>
+
+</div>
+
+`;
+
+}
+
+
+/* PROFIT CALCULATOR */
+
+function calculateProfit(){
+
+let selling =
+Number(document.getElementById("sellingPrice").value) || 0;
+
+let sold =
+Number(document.getElementById("sold").value) || 0;
+
+let cost =
+Number(document.getElementById("costPerProduct").value) || 0;
+
+
+let revenue =
+selling * sold;
+
+let totalCost =
+cost * sold;
+
+let profit =
+revenue - totalCost;
+
+
+let result =
+document.getElementById("profitResult");
+
+result.style.display="block";
+
+result.innerHTML = `
+
+<h3>📊 Profit Simulation</h3>
+
+<p><strong>Sales Revenue:</strong> ₹${revenue}</p>
+
+<p><strong>Total Cost:</strong> ₹${totalCost}</p>
+
+<p><strong>Estimated Profit:</strong> ₹${profit}</p>
+
+<p>
+If you sell ${sold} products at ₹${selling} each,
+the estimated result is shown above.
+</p>
+
+<div class="${profit >= 0 ? "safe" : "warning"}">
+
+<strong>
+${profit >= 0 ? "✅ Positive Estimate" : "⚠️ Cost is higher than revenue"}
+</strong>
+
+</div>
+
+`;
+
+}
+
+</script>
+
+</body>
+  </html>
