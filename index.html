@@ -4,1548 +4,526 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Skill2Biz | Converting Skills into Business Opportunities</title>
+<title>Skill2Biz | Skill to Business</title>
 
 <style>
 *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
-    scroll-behavior:smooth;
+  scroll-behavior:smooth;
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#f7f3ff;
-    color:#222;
-    line-height:1.6;
+  font-family:Arial,sans-serif;
+  background:#f5f3ff;
+  color:#222;
 }
 
 header{
-    background:linear-gradient(135deg,#4b1979,#7138a8,#2878b5);
-    color:white;
-    text-align:center;
-    padding:55px 20px;
+  min-height:85vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  color:white;
+  padding:30px 20px;
+  background:linear-gradient(135deg,#4b1d75,#3564d8,#159c9c);
+}
+
+.hero{
+  max-width:850px;
+}
+
+.logo{
+  width:85px;
+  height:85px;
+  margin:auto;
+  border-radius:25px;
+  background:rgba(255,255,255,.18);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:45px;
 }
 
 header h1{
-    font-size:42px;
-    margin-bottom:10px;
-}
-
-header p{
-    font-size:19px;
+  font-size:clamp(45px,9vw,75px);
+  margin-top:20px;
 }
 
 .tagline{
-    margin-top:15px;
-    font-size:22px;
-    font-weight:bold;
+  font-size:clamp(20px,4vw,28px);
+  margin-top:5px;
+}
+
+.description{
+  max-width:650px;
+  margin:20px auto;
+  font-size:17px;
+  opacity:.9;
+}
+
+.buttons{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:25px;
+}
+
+.btn{
+  padding:14px 23px;
+  border-radius:30px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.primary{
+  background:white;
+  color:#4b1d75;
+}
+
+.secondary{
+  border:1px solid white;
+  color:white;
+}
+
+.btn:hover{
+  transform:translateY(-4px);
 }
 
 .language{
-    margin-top:25px;
+  text-align:center;
+  background:white;
+  padding:10px;
 }
 
 .language button{
-    border:none;
-    padding:10px 18px;
-    margin:5px;
-    border-radius:20px;
-    cursor:pointer;
-    font-weight:bold;
+  border:0;
+  padding:8px 18px;
+  margin:3px;
+  border-radius:20px;
+  cursor:pointer;
+  background:#eee7ff;
+  color:#4b1d75;
+  font-weight:bold;
 }
 
 nav{
-    position:sticky;
-    top:0;
-    z-index:1000;
-    background:#241132;
-    padding:12px;
-    text-align:center;
+  position:sticky;
+  top:0;
+  z-index:100;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:5px;
+  padding:10px;
+  background:white;
+  box-shadow:0 3px 15px #0002;
 }
 
 nav a{
-    color:white;
-    text-decoration:none;
-    margin:5px 8px;
-    font-size:14px;
-    font-weight:bold;
+  text-decoration:none;
+  color:#4b1d75;
+  font-weight:bold;
+  font-size:13px;
+  padding:7px 11px;
+  border-radius:20px;
 }
 
 nav a:hover{
-    color:#ffd95a;
-}
-
-.container{
-    max-width:1100px;
-    margin:auto;
-    padding:25px 18px;
+  background:#eee7ff;
 }
 
 section{
-    margin:25px auto;
-    background:white;
-    border-radius:18px;
-    padding:30px;
-    box-shadow:0 5px 18px rgba(0,0,0,.08);
+  padding:65px 7%;
 }
 
-h2{
-    color:#4b1979;
-    margin-bottom:18px;
-    text-align:center;
+.heading{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 35px;
 }
 
-h3{
-    color:#2878b5;
-    margin:10px 0;
+.heading span{
+  color:#7650c8;
+  font-weight:bold;
+  letter-spacing:2px;
+  font-size:13px;
 }
 
-.problem-grid,
-.feature-grid,
-.roadmap,
-.market-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:18px;
+.heading h2{
+  color:#32164f;
+  font-size:clamp(28px,5vw,42px);
+  margin:7px 0;
+}
+
+.heading p{
+  color:#666;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:20px;
 }
 
 .card{
-    background:#faf7ff;
-    border:2px solid #e5d7f5;
-    border-radius:15px;
-    padding:20px;
+  background:white;
+  padding:25px;
+  border-radius:22px;
+  box-shadow:0 8px 25px #31235a18;
+  transition:.3s;
+}
+
+.card:hover{
+  transform:translateY(-7px);
+}
+
+.icon{
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  background:#eee7ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  margin-bottom:15px;
 }
 
 .card h3{
-    margin-bottom:8px;
+  color:#4b1d75;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#666;
+}
+
+.problem{
+  background:white;
+}
+
+.skills{
+  background:#f5f3ff;
+}
+
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+  gap:15px;
+}
+
+.skill{
+  background:white;
+  padding:20px 10px;
+  border-radius:18px;
+  text-align:center;
+  cursor:pointer;
+  border:2px solid transparent;
+  box-shadow:0 5px 18px #00000012;
+  transition:.3s;
+}
+
+.skill:hover,
+.skill.active{
+  border-color:#7650c8;
+  transform:translateY(-5px);
+}
+
+.skill b{
+  display:block;
+  font-size:34px;
+  margin-bottom:7px;
+}
+
+.selected{
+  max-width:750px;
+  margin:25px auto 0;
+  background:white;
+  padding:22px;
+  border-radius:20px;
+  text-align:center;
+  box-shadow:0 7px 20px #00000012;
+}
+
+.flow-section{
+  background:white;
 }
 
 .flow{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    align-items:center;
-    gap:10px;
-    margin-top:20px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:9px;
 }
 
-.flow-box{
-    background:#eee2ff;
-    color:#3c1263;
-    padding:14px 18px;
-    border-radius:12px;
-    font-weight:bold;
-    text-align:center;
+.flow-item{
+  padding:15px;
+  background:#f2edff;
+  border-radius:15px;
+  font-weight:bold;
+  text-align:center;
 }
 
 .arrow{
-    font-size:25px;
-    font-weight:bold;
-}
-
-.form-box{
-    max-width:700px;
-    margin:20px auto;
-    background:#f8f5ff;
-    padding:25px;
-    border-radius:15px;
-}
-
-label{
-    display:block;
-    font-weight:bold;
-    margin-top:12px;
-}
-
-input,
-select,
-textarea{
-    width:100%;
-    padding:12px;
-    margin-top:6px;
-    border:1px solid #bbb;
-    border-radius:8px;
-    font-size:15px;
-}
-
-textarea{
-    min-height:90px;
-    resize:vertical;
-}
-
-button.main-btn{
-    background:#4b1979;
-    color:white;
-    border:none;
-    padding:13px 22px;
-    border-radius:8px;
-    margin-top:18px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-button.main-btn:hover{
-    background:#7138a8;
-}
-
-.result{
-    margin-top:20px;
-    padding:20px;
-    border-radius:12px;
-    background:#eaf8ed;
-    border-left:5px solid #2d9145;
-    display:none;
-}
-
-.warning{
-    background:#fff5df;
-    border-left:5px solid #e09b00;
-}
-
-.market-form{
-    background:#f8f5ff;
-    padding:25px;
-    border-radius:15px;
-    margin-bottom:25px;
-}
-
-.products{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-    gap:20px;
-}
-
-.product-card{
-    border:2px solid #e1d5ef;
-    border-radius:15px;
-    overflow:hidden;
-    background:white;
-    box-shadow:0 4px 12px rgba(0,0,0,.08);
-}
-
-.product-card img{
-    width:100%;
-    height:190px;
-    object-fit:cover;
-    background:#eee;
-}
-
-.product-info{
-    padding:18px;
-}
-
-.price{
-    color:#18863b;
-    font-size:21px;
-    font-weight:bold;
-    margin:7px 0;
-}
-
-.seller{
-    color:#666;
-    font-size:14px;
-}
-
-.contact-btn{
-    display:inline-block;
-    margin-top:12px;
-    padding:10px 15px;
-    background:#18863b;
-    color:white;
-    border-radius:7px;
-    text-decoration:none;
-    border:none;
-    cursor:pointer;
-}
-
-.delete-btn{
-    background:#b52b2b;
-    color:white;
-    border:none;
-    padding:8px 12px;
-    border-radius:6px;
-    cursor:pointer;
-    margin-top:8px;
-}
-
-.no-products{
-    text-align:center;
-    padding:30px;
-    color:#777;
-}
-
-.badge{
-    display:inline-block;
-    background:#e8ddff;
-    color:#4b1979;
-    padding:6px 12px;
-    border-radius:20px;
-    margin:4px;
-    font-size:14px;
-}
-
-.roadmap-step{
-    text-align:center;
-    background:#f5faff;
-    padding:20px;
-    border-radius:15px;
-    border:2px solid #dcecf8;
-}
-
-.highlight{
-    text-align:center;
-    font-size:21px;
-    font-weight:bold;
-    color:#4b1979;
-    padding:20px;
-}
-
-footer{
-    background:#241132;
-    color:white;
-    text-align:center;
-    padding:30px 15px;
-    margin-top:30px;
-}
-
-.small{
-    font-size:13px;
-    color:#666;
+  color:#7650c8;
+  font-size:22px;
+  font-weight:bold;
 }
 
 @media(max-width:600px){
+  section{
+    padding:50px 5%;
+  }
 
-    header h1{
-        font-size:31px;
-    }
-
-    header p{
-        font-size:16px;
-    }
-
-    section{
-        padding:22px 16px;
-    }
-
-    nav a{
-        display:inline-block;
-        font-size:12px;
-        margin:4px;
-    }
-
-    .flow{
-        flex-direction:column;
-    }
-
-    .arrow{
-        transform:rotate(90deg);
-    }
+  nav a{
+    font-size:11px;
+    padding:6px 8px;
+  }
 }
 </style>
 </head>
 
 <body>
 
-<header>
+<header id="home">
 
-    <h1>💡 Skill2Biz</h1>
+<div class="hero">
 
-    <p>Converting Skills into Business Opportunities</p>
+<div class="logo">💡</div>
 
-    <div class="tagline">
-        Skill → Product → Market → Sale 🚀
-    </div>
+<h1>Skill2Biz</h1>
 
-    <div class="language">
-        <button onclick="setLanguage('en')">English</button>
-        <button onclick="setLanguage('mr')">मराठी</button>
-    </div>
+<div class="tagline">
+Converting Skills into Business Opportunities
+</div>
 
-</header>
+<p class="description">
+A skill-based entrepreneurship platform that helps
+students, women and beginners turn their skills into
+practical business opportunities.
+</p>
 
-<nav>
-    <a href="#home">Home</a>
-    <a href="#problem">Problem</a>
-    <a href="#business">Find Business</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#profit">Profit</a>
-    <a href="#marketplace">Marketplace</a>
-    <a href="#trust">Trust Check</a>
-    <a href="#roadmap">Roadmap</a>
-    <a href="#innovation">Innovation</a>
-</nav>
+<div class="buttons">
 
+<a href="#find" class="btn primary">
+🚀 Find My Business
+</a>
 
-<div class="container">
-
-<!-- HOME -->
-
-<section id="home">
-
-    <h2>🚀 Welcome to Skill2Biz</h2>
-
-    <p style="text-align:center;">
-        Skill2Biz is a concept platform that helps students,
-        women and beginners convert their skills into practical
-        business opportunities.
-    </p>
-
-    <div class="highlight">
-        “Your Skill Can Become Your Business.”
-    </div>
-
-    <div class="flow">
-
-        <div class="flow-box">🎨 Skill</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">💡 Business Idea</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🛠️ Product</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">💰 Pricing</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🛒 Market</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🚀 Sale</div>
-
-    </div>
-
-</section>
-
-
-<!-- PROBLEM -->
-
-<section id="problem">
-
-    <h2>❗ Problem</h2>
-
-    <div class="problem-grid">
-
-        <div class="card">
-            <h3>🎨 Skills</h3>
-            <p>Many people have useful skills but do not know how to use them as a business.</p>
-        </div>
-
-        <div class="card">
-            <h3>💡 Business Idea</h3>
-            <p>Beginners often don't know which business idea suits their skill and budget.</p>
-        </div>
-
-        <div class="card">
-            <h3>💰 Pricing</h3>
-            <p>Many small sellers are confused about product cost, selling price and profit.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛒 Market</h3>
-            <p>After creating a product, finding potential customers can be difficult.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛡️ Trust</h3>
-            <p>People may face suspicious schemes or unrealistic business promises online.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- FIND BUSINESS -->
-
-<section id="business">
-
-    <h2>💡 Find My Business</h2>
-
-    <div class="form-box">
-
-        <label>Select Your Skill</label>
-
-        <select id="skill">
-
-            <option value="">-- Select Skill --</option>
-
-            <option>Crochet</option>
-            <option>Resin Art</option>
-            <option>Baking</option>
-            <option>Tailoring</option>
-            <option>Mehendi</option>
-            <option>Jewellery Making</option>
-            <option>Drawing</option>
-            <option>Photography</option>
-            <option>Canva / Designing</option>
-            <option>Teaching</option>
-            <option>Writing</option>
-            <option>Cooking</option>
-            <option>Social Media</option>
-            <option>Computer Skills</option>
-
-        </select>
-
-
-        <label>Available Budget (₹)</label>
-
-        <input type="number" id="budget" placeholder="Example: 500">
-
-
-        <label>Available Time</label>
-
-        <select id="time">
-
-            <option>1-2 hours/day</option>
-            <option>2-4 hours/day</option>
-            <option>4+ hours/day</option>
-
-        </select>
-
-
-        <button class="main-btn" onclick="findBusiness()">
-            🔍 Find Business Idea
-        </button>
-
-        <div id="businessResult" class="result"></div>
-
-    </div>
-
-</section>
-
-
-<!-- PRICING -->
-
-<section id="pricing">
-
-    <h2>🧮 Transparent Pricing Calculator</h2>
-
-    <p style="text-align:center;">
-        Enter your actual costs to understand a practical selling price.
-    </p>
-
-    <div class="form-box">
-
-        <label>Material Cost (₹)</label>
-        <input type="number" id="material" placeholder="Example: 100">
-
-        <label>Packaging Cost (₹)</label>
-        <input type="number" id="packaging" placeholder="Example: 20">
-
-        <label>Other Cost (₹)</label>
-        <input type="number" id="other" placeholder="Example: 10">
-
-        <label>Your Time / Labour Value (₹)</label>
-        <input type="number" id="labour" placeholder="Example: 50">
-
-        <label>Desired Profit (₹)</label>
-        <input type="number" id="desiredProfit" placeholder="Example: 70">
-
-        <button class="main-btn" onclick="calculatePrice()">
-            🧮 Calculate Price
-        </button>
-
-        <div id="priceResult" class="result"></div>
-
-    </div>
-
-</section>
-
-
-<!-- PROFIT -->
-
-<section id="profit">
-
-    <h2>📈 Profit Simulator</h2>
-
-    <div class="form-box">
-
-        <label>Selling Price Per Product (₹)</label>
-        <input type="number" id="sellPrice">
-
-        <label>Total Cost Per Product (₹)</label>
-        <input type="number" id="totalCost">
-
-        <label>Number of Products Sold</label>
-        <input type="number" id="quantity" placeholder="Example: 25">
-
-        <button class="main-btn" onclick="calculateProfit()">
-            📈 Calculate Profit
-        </button>
-
-        <div id="profitResult" class="result"></div>
-
-    </div>
-
-</section>
-
-
-<!-- MARKETPLACE -->
-
-<section id="marketplace">
-
-    <h2>🛒 Skill2Biz Marketplace</h2>
-
-    <p style="text-align:center;">
-        Create your product, list it here and reach potential customers.
-    </p>
-
-    <div class="highlight">
-        🎨 Make → 💰 Price → 🛒 List → 👥 Reach Customers → 🚀 Sell
-    </div>
-
-
-    <!-- SELLER FORM -->
-
-    <div class="market-form">
-
-        <h3>➕ Sell Your Product</h3>
-
-        <label>Product Name</label>
-
-        <input
-            type="text"
-            id="productName"
-            placeholder="Example: Handmade Crochet Keychain"
-        >
-
-
-        <label>Product Photo</label>
-
-        <input
-            type="file"
-            id="productImage"
-            accept="image/*"
-        >
-
-
-        <label>Price (₹)</label>
-
-        <input
-            type="number"
-            id="productPrice"
-            placeholder="Example: 199"
-        >
-
-
-        <label>Description</label>
-
-        <textarea
-            id="productDescription"
-            placeholder="Write something about your product..."
-        ></textarea>
-
-
-        <label>Seller Name</label>
-
-        <input
-            type="text"
-            id="sellerName"
-            placeholder="Your name"
-        >
-
-
-        <label>Location</label>
-
-        <input
-            type="text"
-            id="sellerLocation"
-            placeholder="Example: Chhatrapati Sambhajinagar"
-        >
-
-
-        <label>Contact Number</label>
-
-        <input
-            type="tel"
-            id="sellerPhone"
-            placeholder="Example: 9876543210"
-        >
-
-
-        <button class="main-btn" onclick="addProduct()">
-            🛒 Add Product to Marketplace
-        </button>
-
-        <p class="small">
-            Demo prototype: product information is stored in this browser.
-        </p>
-
-    </div>
-
-
-    <!-- CUSTOMER AREA -->
-
-    <h3 style="text-align:center;margin:25px 0;">
-        👥 Products for Customers
-    </h3>
-
-    <div id="products" class="products"></div>
-
-</section>
-
-
-<!-- TRUST -->
-
-<section id="trust">
-
-    <h2>🛡️ Trust & Fraud Awareness</h2>
-
-    <p style="text-align:center;">
-        Skill2Biz does not declare a person or company fraudulent automatically.
-        It helps users identify common warning signs.
-    </p>
-
-    <div class="feature-grid">
-
-        <div class="card">
-            <h3>⚠️ Guaranteed Income</h3>
-            <p>Be careful with promises of guaranteed or instant income.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚠️ Unrealistic Returns</h3>
-            <p>Very high returns with little effort can be a warning sign.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚠️ Upfront Payment</h3>
-            <p>Understand why a payment is required before joining a scheme.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚠️ Referral Pressure</h3>
-            <p>Be cautious if earning depends mainly on recruiting others.</p>
-        </div>
-
-        <div class="card">
-            <h3>⚠️ Unclear Information</h3>
-            <p>Check product, service, seller and business information carefully.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ROADMAP -->
-
-<section id="roadmap">
-
-    <h2>🗺️ Business Roadmap</h2>
-
-    <div class="roadmap">
-
-        <div class="roadmap-step">
-            <h3>1️⃣ Skill</h3>
-            <p>Identify your strongest skill.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>2️⃣ Product</h3>
-            <p>Convert your skill into a useful product or service.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>3️⃣ Pricing</h3>
-            <p>Calculate actual cost and practical price.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>4️⃣ Branding</h3>
-            <p>Create a simple identity for your business.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>5️⃣ Marketing</h3>
-            <p>Use social media and local networks.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>6️⃣ First Customer</h3>
-            <p>Reach potential customers through the marketplace.</p>
-        </div>
-
-        <div class="roadmap-step">
-            <h3>7️⃣ Growth</h3>
-            <p>Improve products and gradually expand.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- HOW IT WORKS -->
-
-<section>
-
-    <h2>⚙️ How Skill2Biz Works</h2>
-
-    <div class="flow">
-
-        <div class="flow-box">👤 User</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🎨 Skills</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">💰 Budget</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">💡 Idea</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🛠️ Product</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🧮 Pricing</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">🛒 Marketplace</div>
-        <div class="arrow">→</div>
-
-        <div class="flow-box">👥 Customer</div>
-
-    </div>
-
-</section>
-
-
-<!-- INNOVATION -->
-
-<section id="innovation">
-
-    <h2>💎 Innovation / USP</h2>
-
-    <div class="feature-grid">
-
-        <div class="card">
-            <h3>💡 Personalised Ideas</h3>
-            <p>Business suggestions based on skill, budget and available time.</p>
-        </div>
-
-        <div class="card">
-            <h3>💰 Transparent Pricing</h3>
-            <p>Shows cost components instead of guessing a selling price.</p>
-        </div>
-
-        <div class="card">
-            <h3>📈 Profit Estimation</h3>
-            <p>Helps users estimate profit based on their inputs.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛒 Market Access</h3>
-            <p>Provides a prototype marketplace where users can showcase products.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛡️ Fraud Awareness</h3>
-            <p>Highlights common warning signs in suspicious business schemes.</p>
-        </div>
-
-        <div class="card">
-            <h3>🗺️ Business Roadmap</h3>
-            <p>Guides beginners from skill identification to business growth.</p>
-        </div>
-
-    </div>
-
-    <div class="highlight">
-        “Skill to Business, with Transparent Pricing and Market Access.”
-    </div>
-
-</section>
-
-
-<!-- TECHNOLOGY -->
-
-<section>
-
-    <h2>💻 Technology Used</h2>
-
-    <div style="text-align:center;">
-
-        <span class="badge">HTML</span>
-        <span class="badge">CSS</span>
-        <span class="badge">JavaScript</span>
-
-    </div>
-
-    <br>
-
-    <p style="text-align:center;">
-        The current project is a front-end prototype.
-        A future version can use Python, database, AI and mobile application technology.
-    </p>
-
-</section>
-
-
-<!-- FUTURE -->
-
-<section>
-
-    <h2>🔮 Future Scope</h2>
-
-    <div class="feature-grid">
-
-        <div class="card">
-            <h3>🤖 AI Recommendations</h3>
-            <p>AI can provide more personalised business suggestions.</p>
-        </div>
-
-        <div class="card">
-            <h3>🗄️ Database</h3>
-            <p>Real user accounts and product databases can be added.</p>
-        </div>
-
-        <div class="card">
-            <h3>📱 Mobile App</h3>
-            <p>A dedicated Android/iOS application can be developed.</p>
-        </div>
-
-        <div class="card">
-            <h3>💳 Secure Payments</h3>
-            <p>Verified payment and order systems can be integrated.</p>
-        </div>
-
-        <div class="card">
-            <h3>🚚 Delivery</h3>
-            <p>Future versions can connect sellers with delivery services.</p>
-        </div>
-
-        <div class="card">
-            <h3>✅ Seller Verification</h3>
-            <p>Verified seller profiles and customer reviews can improve trust.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- IMPACT -->
-
-<section>
-
-    <h2>🌱 Expected Impact</h2>
-
-    <div class="problem-grid">
-
-        <div class="card">
-            <h3>👩‍🎓 Students</h3>
-            <p>Discover practical ways to use their skills.</p>
-        </div>
-
-        <div class="card">
-            <h3>👩 Women</h3>
-            <p>Explore flexible skill-based business opportunities.</p>
-        </div>
-
-        <div class="card">
-            <h3>🌱 Beginners</h3>
-            <p>Get step-by-step business guidance.</p>
-        </div>
-
-        <div class="card">
-            <h3>🛍️ Small Sellers</h3>
-            <p>Showcase products and reach potential customers.</p>
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- QR -->
-
-<section>
-
-    <h2>📱 Try the Skill2Biz Prototype</h2>
-
-    <p style="text-align:center;">
-        Scan the QR code to open the live Skill2Biz website.
-    </p>
-
-    <div style="text-align:center;margin-top:20px;">
-
-        <div style="
-            display:inline-block;
-            border:4px solid #4b1979;
-            padding:15px;
-            border-radius:15px;
-        ">
-
-            <p style="font-weight:bold;">
-                SCAN TO EXPLORE
-            </p>
-
-            <p style="margin-top:10px;">
-                Open the website and try the features.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
+<a href="#marketplace" class="btn secondary">
+🛒 Marketplace
+</a>
 
 </div>
 
+</div>
+</header>
+
+<div class="language">
 
-<footer>
+<button onclick="showEnglish()">English</button>
 
-    <h2 style="color:white;">💡 Skill2Biz</h2>
+<button onclick="showMarathi()">मराठी</button>
 
-    <p>
-        Converting Skills into Business Opportunities
-    </p>
+</div>
 
-    <p style="margin-top:10px;">
-        Skills → Opportunities → Market → Business 🚀
-    </p>
+<nav>
 
-    <p style="margin-top:15px;font-size:13px;">
-        Student Innovation Project
-    </p>
+<a href="#home">Home</a>
+<a href="#problem">Problem</a>
+<a href="#skills">Skills</a>
+<a href="#find">Business</a>
+<a href="#pricing">Pricing</a>
+<a href="#profit">Profit</a>
+<a href="#marketplace">Marketplace</a>
+<a href="#trust">Trust</a>
+<a href="#innovation">Innovation</a>
+<a href="#future">Future</a>
+<a href="#qr">QR</a>
 
-</footer>
+</nav>
 
+<section id="problem" class="problem">
 
-<script>
+<div class="heading">
 
-/* BUSINESS RECOMMENDATION */
+<span>THE PROBLEM</span>
 
-function findBusiness(){
+<h2>Skills आहेत, पण Business कसा सुरू करायचा?</h2>
 
-    let skill = document.getElementById("skill").value;
+<p>
+Many people have useful skills but need practical
+guidance to convert those skills into business.
+</p>
 
-    let budget = Number(document.getElementById("budget").value);
+</div>
 
-    let time = document.getElementById("time").value;
+<div class="cards">
 
-    let result = document.getElementById("businessResult");
+<div class="card">
+<div class="icon">🎨</div>
+<h3>Business Idea नाही</h3>
+<p>
+People may have skills but do not know what
+product or service they can sell.
+</p>
+</div>
 
-    if(skill === ""){
+<div class="card">
+<div class="icon">💰</div>
+<h3>Pricing Confusion</h3>
+<p>
+Beginners may not know how to calculate
+actual product cost and selling price.
+</p>
+</div>
 
-        result.style.display="block";
+<div class="card">
+<div class="icon">📊</div>
+<h3>Profit Estimate नाही</h3>
+<p>
+It can be difficult to understand possible
+profit before selling a product.
+</p>
+</div>
 
-        result.innerHTML =
-        "⚠️ Please select your skill first.";
+<div class="card">
+<div class="icon">🛒</div>
+<h3>Market मिळत नाही</h3>
+<p>
+Small sellers need a simple way to showcase
+their products to potential customers.
+</p>
+</div>
 
-        return;
-    }
+<div class="card">
+<div class="icon">🛡️</div>
+<h3>Trust Concerns</h3>
+<p>
+Users need awareness about suspicious offers
+and unsafe payment requests.
+</p>
+</div>
 
+</div>
+</section>
 
-    let ideas = {
+<section id="skills" class="skills">
 
-        "Crochet":
-        "🧶 Crochet keychains, bookmarks, flowers and small gift items.",
+<div class="heading">
 
-        "Resin Art":
-        "✨ Resin keychains, name tags, bookmarks and customised gifts.",
+<span>STEP 01</span>
 
-        "Baking":
-        "🧁 Small pre-order cakes, brownies, cupcakes or snack boxes.",
+<h2>🎨 Discover Your Skill</h2>
 
-        "Tailoring":
-        "🧵 Alteration services, simple stitching and customised clothing.",
+<p>
+Select a skill and see possible business opportunities.
+</p>
 
-        "Mehendi":
-        "🌿 Home-based mehendi services for small events and functions.",
+</div>
 
-        "Jewellery Making":
-        "💎 Handmade earrings, bracelets and customised jewellery.",
+<div class="skill-grid">
 
-        "Drawing":
-        "🎨 Handmade cards, portraits, illustrations and digital artwork.",
+<div class="skill" onclick="selectSkill('Crochet',this)">
+<b>🧶</b> Crochet
+</div>
 
-        "Photography":
-        "📷 Mobile product photography for local sellers and small businesses.",
+<div class="skill" onclick="selectSkill('Drawing',this)">
+<b>🎨</b> Drawing
+</div>
 
-        "Canva / Designing":
-        "💻 Posters, invitations, menus, social media posts and simple branding.",
+<div class="skill" onclick="selectSkill('Writing',this)">
+<b>✍️</b> Writing
+</div>
 
-        "Teaching":
-        "📚 Home tutoring or beginner online classes.",
+<div class="skill" onclick="selectSkill('Teaching',this)">
+<b>📚</b> Teaching
+</div>
 
-        "Writing":
-        "✍️ Invitation writing, captions, basic content writing and proofreading.",
+<div class="skill" onclick="selectSkill('Crafting',this)">
+<b>🎁</b> Crafting
+</div>
 
-        "Cooking":
-        "🍱 Small pre-order food items, snacks or homemade speciality products.",
+<div class="skill" onclick="selectSkill('Photography',this)">
+<b>📸</b> Photography
+</div>
 
-        "Social Media":
-        "📱 Social media post creation, captions and basic page management.",
+<div class="skill" onclick="selectSkill('Computer',this)">
+<b>💻</b> Computer
+</div>
 
-        "Computer Skills":
-        "💻 Basic typing, document formatting, poster creation and digital assistance."
+<div class="skill" onclick="selectSkill('Designing',this)">
+<b>🖥️</b> Designing
+</div>
 
-    };
+<div class="skill" onclick="selectSkill('Cooking',this)">
+<b>🍱</b> Cooking
+</div>
 
+<div class="skill" onclick="selectSkill('Social Media',this)">
+<b>📱</b> Social Media
+</div>
 
-    let idea = ideas[skill];
+</div>
 
-    result.style.display="block";
+<div class="selected" id="selectedSkill">
 
-    result.innerHTML =
+<h3>👆 Select Your Skill</h3>
 
-    "<h3>💡 Suggested Business</h3>" +
+<p>
+Your business opportunity will appear here.
+</p>
 
-    "<p>" + idea + "</p>" +
+</div>
 
-    "<p><b>💰 Budget:</b> ₹" +
-    (budget || 0) +
-    "</p>" +
+</section>
 
-    "<p><b>⏰ Time:</b> " +
-    time +
-    "</p>" +
+<section class="flow-section">
 
-    "<p style='margin-top:10px;'>"+
-    "Start with resources you already have and keep the initial cost low where possible."+
-    "</p>";
+<div class="heading">
 
-}
+<span>OUR PROCESS</span>
 
+<h2>🔄 From Skill to Business</h2>
 
-/* PRICING CALCULATOR */
+</div>
 
-function calculatePrice(){
+<div class="flow">
 
-    let material =
-    Number(document.getElementById("material").value) || 0;
+<div class="flow-item">👤 User</div>
+<div class="arrow">→</div>
 
-    let packaging =
-    Number(document.getElementById("packaging").value) || 0;
+<div class="flow-item">🎨 Skill</div>
+<div class="arrow">→</div>
 
-    let other =
-    Number(document.getElementById("other").value) || 0;
+<div class="flow-item">💰 Budget</div>
+<div class="arrow">→</div>
 
-    let labour =
-    Number(document.getElementById("labour").value) || 0;
+<div class="flow-item">💡 Idea</div>
+<div class="arrow">→</div>
 
-    let desiredProfit =
-    Number(document.getElementById("desiredProfit").value) || 0;
+<div class="flow-item">🛠️ Product</div>
+<div class="arrow">→</div>
 
+<div class="flow-item">🧮 Pricing</div>
+<div class="arrow">→</div>
 
-    let total =
-    material +
-    packaging +
-    other +
-    labour;
+<div class="flow-item">🛒 Market</div>
+<div class="arrow">→</div>
 
-    let sellingPrice =
-    total +
-    desiredProfit;
+<div class="flow-item">👥 Customer</div>
+<div class="arrow">→</div>
 
+<div class="flow-item">🚀 Sale</div>
 
-    let result =
-    document.getElementById("priceResult");
+</div>
 
-
-    result.style.display="block";
-
-    result.innerHTML =
-
-    "<h3>🧮 Price Estimate</h3>" +
-
-    "<p>Material Cost: ₹" + material + "</p>" +
-
-    "<p>Packaging: ₹" + packaging + "</p>" +
-
-    "<p>Other Cost: ₹" + other + "</p>" +
-
-    "<p>Labour/Time Value: ₹" + labour + "</p>" +
-
-    "<hr>" +
-
-    "<p><b>Total Cost: ₹" + total + "</b></p>" +
-
-    "<p><b>Suggested Price: ₹" + sellingPrice + "</b></p>" +
-
-    "<p>💡 This is an estimate. The final market price can vary.</p>";
-
-}
-
-
-/* PROFIT SIMULATOR */
-
-function calculateProfit(){
-
-    let sell =
-    Number(document.getElementById("sellPrice").value) || 0;
-
-    let cost =
-    Number(document.getElementById("totalCost").value) || 0;
-
-    let quantity =
-    Number(document.getElementById("quantity").value) || 0;
-
-
-    let profitPerProduct =
-    sell - cost;
-
-    let totalProfit =
-    profitPerProduct * quantity;
-
-
-    let result =
-    document.getElementById("profitResult");
-
-
-    result.style.display="block";
-
-    result.innerHTML =
-
-    "<h3>📈 Profit Estimate</h3>" +
-
-    "<p>Profit per product: ₹" +
-    profitPerProduct +
-    "</p>" +
-
-    "<p>Products sold: " +
-    quantity +
-    "</p>" +
-
-    "<p><b>Estimated Total Profit: ₹" +
-    totalProfit +
-    "</b></p>" +
-
-    "<p>⚠️ This is only an estimate based on your inputs. Profit is not guaranteed.</p>";
-
-}
-
-
-/* MARKETPLACE */
-
-let products =
-JSON.parse(localStorage.getItem("skill2bizProducts")) || [];
-
-
-function addProduct(){
-
-    let name =
-    document.getElementById("productName").value.trim();
-
-    let price =
-    document.getElementById("productPrice").value;
-
-    let description =
-    document.getElementById("productDescription").value.trim();
-
-    let seller =
-    document.getElementById("sellerName").value.trim();
-
-    let location =
-    document.getElementById("sellerLocation").value.trim();
-
-    let phone =
-    document.getElementById("sellerPhone").value.trim();
-
-    let imageFile =
-    document.getElementById("productImage").files[0];
-
-
-    if(!name || !price || !seller || !phone){
-
-        alert(
-        "Please enter Product Name, Price, Seller Name and Contact Number."
-        );
-
-        return;
-    }
-
-
-    if(imageFile){
-
-        let reader =
-        new FileReader();
-
-
-        reader.onload = function(e){
-
-            saveProduct(
-                name,
-                price,
-                description,
-                seller,
-                location,
-                phone,
-                e.target.result
-            );
-
-        };
-
-        reader.readAsDataURL(imageFile);
-
-    }else{
-
-        saveProduct(
-            name,
-            price,
-            description,
-            seller,
-            location,
-            phone,
-            ""
-        );
-
-    }
-
-}
-
-
-function saveProduct(
-    name,
-    price,
-    description,
-    seller,
-    location,
-    phone,
-    image
-){
-
-    let product = {
-
-        id:Date.now(),
-
-        name:name,
-
-        price:price,
-
-        description:description,
-
-        seller:seller,
-
-        location:location,
-
-        phone:phone,
-
-        image:image
-
-    };
-
-
-    products.unshift(product);
-
-
-    localStorage.setItem(
-        "skill2bizProducts",
-        JSON.stringify(products)
-    );
-
-
-    document.getElementById("productName").value="";
-
-    document.getElementById("productPrice").value="";
-
-    document.getElementById("productDescription").value="";
-
-    document.getElementById("sellerName").value="";
-
-    document.getElementById("sellerLocation").value="";
-
-    document.getElementById("sellerPhone").value="";
-
-    document.getElementById("productImage").value="";
-
-
-    displayProducts();
-
-
-    alert(
-    "✅ Product successfully added to Skill2Biz Marketplace!"
-    );
-
-}
-
-
-function displayProducts(){
-
-    let container =
-    document.getElementById("products");
-
-
-    container.innerHTML="";
-
-
-    if(products.length === 0){
-
-        container.innerHTML =
-
-        "<div class='no-products'>" +
-
-        "<h3>🛒 No products yet</h3>" +
-
-        "<p>Be the first seller to add a product!</p>" +
-
-        "</div>";
-
-        return;
-    }
-
-
-    products.forEach(function(product){
-
-        let imageHTML;
-
-
-        if(product.image){
-
-            imageHTML =
-            "<img src='" +
-            product.image +
-            "' alt='Product'>";
-
-        }else{
-
-            imageHTML =
-            "<div style='height:190px;background:#eee;display:flex;align-items:center;justify-content:center;font-size:50px;'>🛍️</div>";
-
-        }
-
-
-        let whatsappNumber =
-        product.phone.replace(/[^0-9]/g,"");
-
-
-        if(whatsappNumber.length === 10){
-
-            whatsappNumber =
-            "91" + whatsappNumber;
-
-        }
-
-
-        let whatsappMessage =
-        encodeURIComponent(
-        "Hello " +
-        product.seller +
-        ", I am interested in your Skill2Biz product: " +
-        product.name
-        );
-
-
-        let card =
-
-        "<div class='product-card'>" +
-
-        imageHTML +
-
-        "<div class='product-info'>" +
-
-        "<h3>" +
-        product.name +
-        "</h3>" +
-
-        "<div class='price'>₹" +
-        product.price +
-        "</div>" +
-
-        "<p>" +
-        (product.description ||
-        "Handmade / skill-based product") +
-        "</p>" +
-
-        "<p class='seller'>👤 Seller: " +
-        product.seller +
-        "</p>" +
-
-        "<p class='seller'>📍 " +
-        (product.location || "Location not provided") +
-        "</p>" +
-
-        "<a class='contact-btn' " +
-        "href='https://wa.me/" +
-        whatsappNumber +
-        "?text=" +
-        whatsappMessage +
-        "' target='_blank'>" +
-
-        "💬 Contact Seller" +
-
-        "</a>" +
-
-        "<br>" +
-
-        "<button class='delete-btn' " +
-        "onclick='deleteProduct(" +
-        product.id +
-        ")'>" +
-
-        "Delete Demo Product" +
-
-        "</button>" +
-
-        "</div>" +
-
-        "</div>";
-
-
-        container.innerHTML += card;
-
-    });
-
-}
-
-
-function deleteProduct(id){
-
-    products =
-    products.filter(function(product){
-
-        return product.id !== id;
-
-    });
-
-
-    localStorage.setItem(
-        "skill2bizProducts",
-        JSON.stringify(products)
-    );
-
-
-    displayProducts();
-
-}
-
-
-/* LANGUAGE DEMO */
-
-function setLanguage(language){
-
-    if(language === "mr"){
-
-        alert(
-        "मराठी mode हा सध्या demo आहे. पूर्ण bilingual version future update मध्ये जोडता येईल."
-        );
-
-    }else{
-
-        alert(
-        "English mode selected."
-        );
-
-    }
-
-}
-
-
-/* LOAD MARKETPLACE */
-
-displayProducts();
-
-</script>
-
-</body>
-          </html>
+</section>
