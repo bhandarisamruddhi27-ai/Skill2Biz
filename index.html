@@ -527,3 +527,808 @@ Your business opportunity will appear here.
 </div>
 
 </section>
+<!-- =========================
+     BUSINESS FINDER
+========================= -->
+
+<section id="find">
+
+<div class="heading">
+
+<span>STEP 02</span>
+
+<h2>💡 Find My Business Idea</h2>
+
+<p>
+Tell us your skill, budget and available time.
+Skill2Biz will suggest a suitable business idea.
+</p>
+
+</div>
+
+<div class="tool-box">
+
+<div class="form-grid">
+
+<div>
+<label>Your Skill</label>
+
+<select id="businessSkill">
+
+<option value="">Select Skill</option>
+
+<option value="crochet">Crochet</option>
+<option value="drawing">Drawing</option>
+<option value="writing">Writing</option>
+<option value="teaching">Teaching</option>
+<option value="crafting">Crafting</option>
+<option value="photography">Photography</option>
+<option value="computer">Computer</option>
+<option value="designing">Designing</option>
+<option value="cooking">Cooking</option>
+<option value="social">Social Media</option>
+
+</select>
+</div>
+
+
+<div>
+<label>Budget (₹)</label>
+
+<input
+type="number"
+id="budget"
+placeholder="Example: 500">
+</div>
+
+
+<div>
+<label>Available Time</label>
+
+<select id="time">
+
+<option value="">Select Time</option>
+
+<option>1–2 hours/day</option>
+
+<option>2–4 hours/day</option>
+
+<option>4+ hours/day</option>
+
+</select>
+</div>
+
+</div>
+
+
+<button class="main-btn" onclick="findBusiness()">
+🔍 Find Business Idea
+</button>
+
+
+<button
+class="main-btn demo-btn"
+onclick="demoBusiness()">
+
+⚡ Try Demo
+
+</button>
+
+
+<div id="businessResult" class="result">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PRICING CALCULATOR
+========================= -->
+
+<section id="pricing" class="calculator-section">
+
+<div class="heading">
+
+<span>STEP 03</span>
+
+<h2>🧮 Transparent Pricing Calculator</h2>
+
+<p>
+Calculate your product cost and estimated selling price.
+</p>
+
+</div>
+
+
+<div class="calculator">
+
+<div class="form-grid">
+
+<div>
+<label>Material Cost (₹)</label>
+
+<input
+type="number"
+id="material"
+placeholder="100">
+</div>
+
+
+<div>
+<label>Packaging Cost (₹)</label>
+
+<input
+type="number"
+id="packaging"
+placeholder="20">
+</div>
+
+
+<div>
+<label>Other Cost (₹)</label>
+
+<input
+type="number"
+id="other"
+placeholder="10">
+</div>
+
+
+<div>
+<label>Labour Cost (₹)</label>
+
+<input
+type="number"
+id="labour"
+placeholder="50">
+</div>
+
+
+<div>
+<label>Desired Profit (₹)</label>
+
+<input
+type="number"
+id="desiredProfit"
+placeholder="70">
+</div>
+
+</div>
+
+
+<button
+class="main-btn"
+onclick="calculatePrice()">
+
+🧮 Calculate Price
+
+</button>
+
+
+<div
+id="priceOutput"
+class="output-box">
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     PROFIT SIMULATOR
+========================= -->
+
+<section id="profit">
+
+<div class="heading">
+
+<span>STEP 04</span>
+
+<h2>📈 Profit Simulator</h2>
+
+<p>
+Estimate your possible profit before selling your product.
+</p>
+
+</div>
+
+
+<div class="calculator">
+
+<div class="form-grid">
+
+<div>
+
+<label>Selling Price (₹)</label>
+
+<input
+type="number"
+id="sellingPrice"
+placeholder="250">
+
+</div>
+
+
+<div>
+
+<label>Product Cost (₹)</label>
+
+<input
+type="number"
+id="totalCost"
+placeholder="180">
+
+</div>
+
+
+<div>
+
+<label>Products Sold</label>
+
+<input
+type="number"
+id="quantity"
+placeholder="10">
+
+</div>
+
+</div>
+
+
+<button
+class="main-btn"
+onclick="calculateProfit()">
+
+📊 Calculate Profit
+
+</button>
+
+
+<div
+id="profitOutput"
+class="output-box">
+
+</div>
+
+</div>
+
+
+<!-- MINI DASHBOARD -->
+
+<div class="dashboard">
+
+<div class="stat">
+
+<div class="stat-icon">🎯</div>
+
+<h3>1</h3>
+
+<p>Skill to Start</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">💡</div>
+
+<h3>10+</h3>
+
+<p>Business Ideas</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">🛒</div>
+
+<h3>1</h3>
+
+<p>Marketplace</p>
+
+</div>
+
+
+<div class="stat">
+
+<div class="stat-icon">🚀</div>
+
+<h3>∞</h3>
+
+<p>Growth Possibilities</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     MARKETPLACE
+========================= -->
+
+<section id="marketplace" class="marketplace-section">
+
+<div class="heading">
+
+<span>STEP 05</span>
+
+<h2>🛒 Skill2Biz Marketplace</h2>
+
+<p>
+Showcase your products and connect with potential customers.
+</p>
+
+</div>
+
+
+<div class="market-form">
+
+<h3 class="market-title">
+➕ Add Your Product
+</h3>
+
+
+<div class="form-grid">
+
+
+<div>
+
+<label>Product Name</label>
+
+<input
+type="text"
+id="productName"
+placeholder="Crochet Keychain">
+
+</div>
+
+
+<div>
+
+<label>Price (₹)</label>
+
+<input
+type="number"
+id="productPrice"
+placeholder="150">
+
+</div>
+
+
+<div>
+
+<label>Seller Name</label>
+
+<input
+type="text"
+id="sellerName"
+placeholder="Your Name">
+
+</div>
+
+
+<div>
+
+<label>Location</label>
+
+<input
+type="text"
+id="sellerLocation"
+placeholder="Your City">
+
+</div>
+
+
+<div>
+
+<label>WhatsApp Number</label>
+
+<input
+type="tel"
+id="sellerContact"
+placeholder="91XXXXXXXXXX">
+
+</div>
+
+
+<div>
+
+<label>Product Photo</label>
+
+<input
+type="file"
+id="productImage"
+accept="image/*">
+
+</div>
+
+</div>
+
+
+<label style="margin-top:18px;">
+Product Description
+</label>
+
+<textarea
+id="productDescription"
+rows="3"
+placeholder="Handmade customised product...">
+</textarea>
+
+
+<button
+class="main-btn"
+onclick="addProduct()">
+
+🛍️ Add Product
+
+</button>
+
+</div>
+
+
+<div
+class="products"
+id="productList">
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TRUST & FRAUD AWARENESS
+========================= -->
+
+<section id="trust" class="trust-section">
+
+<div class="heading">
+
+<span>SAFETY AWARENESS</span>
+
+<h2>🛡️ Trust & Fraud Awareness</h2>
+
+<p>
+Smart business also means making safe and informed decisions.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">⚠️</div>
+
+<h3>Warning Signs</h3>
+
+<p>
+Be careful with unrealistic offers,
+suspicious links and unusual payment requests.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🔐</div>
+
+<h3>Protect Information</h3>
+
+<p>
+Never share passwords, OTPs or sensitive
+information with unknown people.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">✅</div>
+
+<h3>Verify Before Payment</h3>
+
+<p>
+Check important details before making
+transactions or accepting unknown offers.
+</p>
+
+</div>
+
+
+</div>
+
+
+<div class="selected trust-note">
+
+<h3>🛡️ Trust Principle</h3>
+
+<p>
+Skill2Biz creates awareness about common warning signs.
+It does not label a person or company fraudulent without evidence.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     BUSINESS ROADMAP
+========================= -->
+
+<section>
+
+<div class="heading">
+
+<span>BUSINESS JOURNEY</span>
+
+<h2>🗺️ Business Roadmap</h2>
+
+<p>
+A simple journey from discovering a skill to growing a business.
+</p>
+
+</div>
+
+
+<div class="roadmap">
+
+
+<div class="step">
+
+<div class="step-number">1</div>
+
+<h3>🎨 Identify Skill</h3>
+
+<p>Find what you are good at.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">2</div>
+
+<h3>💡 Choose Idea</h3>
+
+<p>Select a suitable business idea.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">3</div>
+
+<h3>🛠️ Create Product</h3>
+
+<p>Turn your skill into a product or service.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">4</div>
+
+<h3>🧮 Calculate Cost</h3>
+
+<p>Understand your actual cost.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">5</div>
+
+<h3>💰 Decide Price</h3>
+
+<p>Set a transparent price estimate.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">6</div>
+
+<h3>🛒 Enter Market</h3>
+
+<p>Showcase your product.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">7</div>
+
+<h3>👥 Find Customers</h3>
+
+<p>Connect with potential customers.</p>
+
+</div>
+
+
+<div class="step">
+
+<div class="step-number">8</div>
+
+<h3>🚀 Grow</h3>
+
+<p>Improve and expand your business.</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     INNOVATION
+========================= -->
+
+<section id="innovation">
+
+<div class="heading">
+
+<span>OUR INNOVATION</span>
+
+<h2>💡 What Makes Skill2Biz Different?</h2>
+
+<p>
+Our platform combines multiple beginner-friendly business tools
+in one place.
+</p>
+
+</div>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<div class="icon">🎯</div>
+
+<h3>Personalised Ideas</h3>
+
+<p>
+Business suggestions based on skill,
+budget and available time.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">💰</div>
+
+<h3>Transparent Pricing</h3>
+
+<p>
+Helps users understand product cost
+before deciding the price.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">📊</div>
+
+<h3>Profit Estimation</h3>
+
+<p>
+Provides an estimated profit based
+on user inputs.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🛒</div>
+
+<h3>Marketplace Access</h3>
+
+<p>
+Provides a digital space to showcase
+products and reach potential customers.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🛡️</div>
+
+<h3>Fraud Awareness</h3>
+
+<p>
+Helps users recognise common warning
+signs in online transactions.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="icon">🗺️</div>
+
+<h3>Business Roadmap</h3>
+
+<p>
+Gives beginners a simple step-by-step
+business journey.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="usp">
+
+<h3>⭐ Our USP</h3>
+
+<p>
+Skill to Business, with Transparent Pricing and Market Access.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     TECHNOLOGY
+========================= -->
+
+<section class="tech-section">
+
+<div class="heading">
+
+<span>PROTOTYPE</span>
+
+<h2>💻 Technology Used</h2>
+
+<p>
+The current working prototype is developed using:
+</p>
+
+</div>
+
+
+<div class="tech-box">
+
+<div class="tech">🌐 HTML</div>
+
+<div class="tech">🎨 CSS</div>
+
+<div class="tech">⚙️ JavaScript</div>
+
+</div>
+
+</section>
