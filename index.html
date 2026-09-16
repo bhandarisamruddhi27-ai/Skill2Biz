@@ -21,6 +21,7 @@ body{
   font-family:Arial,sans-serif;
   background:#f5f3ff;
   color:#222;
+  line-height:1.6;
 }
 
 header{
@@ -58,6 +59,7 @@ header h1{
 .tagline{
   font-size:clamp(20px,4vw,28px);
   margin-top:5px;
+  font-weight:bold;
 }
 
 .description{
@@ -146,7 +148,7 @@ section{
 
 .heading{
   text-align:center;
-  max-width:700px;
+  max-width:750px;
   margin:0 auto 35px;
 }
 
@@ -279,7 +281,301 @@ section{
   font-weight:bold;
 }
 
+.tool-box,
+.calculator,
+.market-form{
+  max-width:950px;
+  margin:25px auto;
+  background:#fffaf0;
+  padding:25px;
+  border-radius:20px;
+  box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:18px;
+  margin:20px 0;
+}
+
+.form-group{
+  display:flex;
+  flex-direction:column;
+}
+
+label{
+  font-weight:bold;
+  color:#4b1d75;
+  margin-bottom:7px;
+}
+
+input,
+select,
+textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #d8c7a5;
+  border-radius:10px;
+  font-size:15px;
+  font-family:Arial,sans-serif;
+  background:white;
+}
+
+textarea{
+  resize:vertical;
+}
+
+.main-btn{
+  border:none;
+  padding:13px 22px;
+  border-radius:25px;
+  cursor:pointer;
+  font-weight:bold;
+  margin:5px;
+  background:#7b1e3a;
+  color:white;
+  transition:.3s;
+}
+
+.main-btn:hover{
+  transform:translateY(-2px);
+  opacity:.9;
+}
+
+.demo-btn{
+  background:#3564d8;
+}
+
+.result,
+.output-box{
+  margin-top:20px;
+  padding:20px;
+  border-radius:15px;
+  background:#f4ead7;
+  font-size:17px;
+  line-height:1.8;
+}
+
+.result h3,
+.output-box h3{
+  color:#4b1d75;
+  margin-bottom:10px;
+}
+
+.calculator-section{
+  background:white;
+}
+
+.dashboard{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+  max-width:950px;
+  margin:30px auto 0;
+}
+
+.stat{
+  background:white;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.stat-icon{
+  font-size:30px;
+}
+
+.stat h3{
+  font-size:28px;
+  color:#4b1d75;
+}
+
+.marketplace-section{
+  background:#f5f3ff;
+}
+
+.market-title{
+  color:#4b1d75;
+  margin-bottom:15px;
+}
+
+.products{
+  max-width:1100px;
+  margin:30px auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.product{
+  background:white;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:0 7px 22px rgba(0,0,0,.10);
+}
+
+.product img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  background:#eee;
+}
+
+.product-content{
+  padding:18px;
+}
+
+.product-content h3{
+  color:#4b1d75;
+}
+
+.price{
+  font-size:21px;
+  font-weight:bold;
+  color:#159c9c;
+  margin:8px 0;
+}
+
+.whatsapp{
+  display:inline-block;
+  text-decoration:none;
+  padding:10px 15px;
+  border-radius:20px;
+  background:#25D366;
+  color:white;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+.delete-btn{
+  border:none;
+  background:#8b0000;
+  color:white;
+  padding:8px 12px;
+  border-radius:15px;
+  margin-top:10px;
+  cursor:pointer;
+}
+
+.trust-section{
+  background:white;
+}
+
+.trust-note{
+  background:#f4ead7;
+  padding:15px;
+  border-radius:12px;
+  margin-top:15px;
+}
+
+.roadmap{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+  gap:15px;
+  margin-top:25px;
+}
+
+.step{
+  background:#fff;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+}
+
+.step-number{
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  background:#7b1e3a;
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:0 auto 10px;
+  font-weight:bold;
+}
+
+.usp{
+  padding:20px;
+  margin:25px auto 0;
+  max-width:800px;
+  border-left:5px solid #7b1e3a;
+  background:#f4ead7;
+  font-weight:bold;
+  font-size:18px;
+  border-radius:10px;
+}
+
+.tech-section{
+  background:white;
+}
+
+.tech-box{
+  max-width:800px;
+  margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+  gap:15px;
+}
+
+.tech{
+  background:#f5f3ff;
+  padding:20px;
+  text-align:center;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  font-weight:bold;
+}
+
+.future-box{
+  background:linear-gradient(135deg,#fff8e8,#f3e3c1);
+}
+
+.future-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
+  gap:15px;
+  margin-top:20px;
+}
+
+.future-card{
+  background:white;
+  padding:18px;
+  border-radius:15px;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.future-card h3{
+  color:#4b1d75;
+  margin-bottom:7px;
+}
+
+.qr-section{
+  text-align:center;
+  background:white;
+}
+
+.qr-section img{
+  width:190px;
+  max-width:80%;
+  margin:20px auto;
+  display:block;
+  border:8px solid white;
+  box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  background:#4b1024;
+  color:white;
+}
+
 @media(max-width:600px){
+
   section{
     padding:50px 5%;
   }
@@ -288,11 +584,36 @@ section{
     font-size:11px;
     padding:6px 8px;
   }
+
+  .form-grid{
+    grid-template-columns:1fr;
+  }
+
+  .products{
+    grid-template-columns:1fr;
+  }
+
+  .main-btn{
+    width:100%;
+    margin:5px 0;
+  }
+
+  .flow{
+    flex-direction:column;
+  }
+
+  .arrow{
+    transform:rotate(90deg);
+  }
 }
 </style>
 </head>
 
 <body>
+
+<!-- =========================
+     HOME
+========================= -->
 
 <header id="home">
 
@@ -327,6 +648,9 @@ practical business opportunities.
 </div>
 </header>
 
+
+<!-- LANGUAGE -->
+
 <div class="language">
 
 <button onclick="showEnglish()">English</button>
@@ -334,6 +658,9 @@ practical business opportunities.
 <button onclick="showMarathi()">मराठी</button>
 
 </div>
+
+
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -350,6 +677,11 @@ practical business opportunities.
 <a href="#qr">QR</a>
 
 </nav>
+
+
+<!-- =========================
+     PROBLEM
+========================= -->
 
 <section id="problem" class="problem">
 
@@ -415,6 +747,11 @@ and unsafe payment requests.
 
 </div>
 </section>
+
+
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills" class="skills">
 
@@ -486,6 +823,11 @@ Your business opportunity will appear here.
 
 </section>
 
+
+<!-- =========================
+     FLOW
+========================= -->
+
 <section class="flow-section">
 
 <div class="heading">
@@ -527,6 +869,8 @@ Your business opportunity will appear here.
 </div>
 
 </section>
+
+
 <!-- =========================
      BUSINESS FINDER
 ========================= -->
@@ -550,13 +894,13 @@ Skill2Biz will suggest a suitable business idea.
 
 <div class="form-grid">
 
-<div>
+<div class="form-group">
+
 <label>Your Skill</label>
 
 <select id="businessSkill">
 
 <option value="">Select Skill</option>
-
 <option value="crochet">Crochet</option>
 <option value="drawing">Drawing</option>
 <option value="writing">Writing</option>
@@ -569,33 +913,45 @@ Skill2Biz will suggest a suitable business idea.
 <option value="social">Social Media</option>
 
 </select>
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Budget (₹)</label>
 
 <input
 type="number"
 id="budget"
+min="0"
 placeholder="Example: 500">
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Available Time</label>
 
 <select id="time">
 
 <option value="">Select Time</option>
 
-<option>1–2 hours/day</option>
+<option value="1–2 hours/day">
+1–2 hours/day
+</option>
 
-<option>2–4 hours/day</option>
+<option value="2–4 hours/day">
+2–4 hours/day
+</option>
 
-<option>4+ hours/day</option>
+<option value="4+ hours/day">
+4+ hours/day
+</option>
 
 </select>
+
 </div>
 
 </div>
@@ -605,17 +961,16 @@ placeholder="Example: 500">
 🔍 Find Business Idea
 </button>
 
-
-<button
-class="main-btn demo-btn"
-onclick="demoBusiness()">
-
+<button class="main-btn demo-btn" onclick="demoBusiness()">
 ⚡ Try Demo
-
 </button>
 
 
 <div id="businessResult" class="result">
+
+<p>
+Your recommended business idea will appear here.
+</p>
 
 </div>
 
@@ -625,7 +980,7 @@ onclick="demoBusiness()">
 
 
 <!-- =========================
-     PRICING CALCULATOR
+     PRICING
 ========================= -->
 
 <section id="pricing" class="calculator-section">
@@ -642,75 +997,87 @@ Calculate your product cost and estimated selling price.
 
 </div>
 
-
 <div class="calculator">
 
 <div class="form-grid">
 
-<div>
+<div class="form-group">
+
 <label>Material Cost (₹)</label>
 
 <input
 type="number"
 id="material"
+min="0"
 placeholder="100">
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Packaging Cost (₹)</label>
 
 <input
 type="number"
 id="packaging"
+min="0"
 placeholder="20">
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Other Cost (₹)</label>
 
 <input
 type="number"
 id="other"
+min="0"
 placeholder="10">
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Labour Cost (₹)</label>
 
 <input
 type="number"
 id="labour"
+min="0"
 placeholder="50">
+
 </div>
 
 
-<div>
+<div class="form-group">
+
 <label>Desired Profit (₹)</label>
 
 <input
 type="number"
 id="desiredProfit"
+min="0"
 placeholder="70">
-</div>
 
 </div>
 
+</div>
 
-<button
-class="main-btn"
-onclick="calculatePrice()">
 
+<button class="main-btn" onclick="calculatePrice()">
 🧮 Calculate Price
-
 </button>
 
 
-<div
-id="priceOutput"
-class="output-box">
+<div id="priceOutput" class="output-box">
+
+<p>
+Enter your costs and click Calculate Price.
+</p>
 
 </div>
 
@@ -720,7 +1087,7 @@ class="output-box">
 
 
 <!-- =========================
-     PROFIT SIMULATOR
+     PROFIT
 ========================= -->
 
 <section id="profit">
@@ -742,37 +1109,40 @@ Estimate your possible profit before selling your product.
 
 <div class="form-grid">
 
-<div>
+<div class="form-group">
 
 <label>Selling Price (₹)</label>
 
 <input
 type="number"
 id="sellingPrice"
+min="0"
 placeholder="250">
 
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Product Cost (₹)</label>
 
 <input
 type="number"
 id="totalCost"
+min="0"
 placeholder="180">
 
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Products Sold</label>
 
 <input
 type="number"
 id="quantity"
+min="0"
 placeholder="10">
 
 </div>
@@ -780,25 +1150,21 @@ placeholder="10">
 </div>
 
 
-<button
-class="main-btn"
-onclick="calculateProfit()">
-
+<button class="main-btn" onclick="calculateProfit()">
 📊 Calculate Profit
-
 </button>
 
 
-<div
-id="profitOutput"
-class="output-box">
+<div id="profitOutput" class="output-box">
+
+<p>
+Enter values and click Calculate Profit.
+</p>
 
 </div>
 
 </div>
 
-
-<!-- MINI DASHBOARD -->
 
 <div class="dashboard">
 
@@ -878,8 +1244,7 @@ Showcase your products and connect with potential customers.
 
 <div class="form-grid">
 
-
-<div>
+<div class="form-group">
 
 <label>Product Name</label>
 
@@ -891,19 +1256,20 @@ placeholder="Crochet Keychain">
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Price (₹)</label>
 
 <input
 type="number"
 id="productPrice"
+min="0"
 placeholder="150">
 
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Seller Name</label>
 
@@ -915,7 +1281,7 @@ placeholder="Your Name">
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Location</label>
 
@@ -927,19 +1293,19 @@ placeholder="Your City">
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>WhatsApp Number</label>
 
 <input
 type="tel"
 id="sellerContact"
-placeholder="91XXXXXXXXXX">
+placeholder="10 digit number">
 
 </div>
 
 
-<div>
+<div class="form-group">
 
 <label>Product Photo</label>
 
@@ -953,31 +1319,26 @@ accept="image/*">
 </div>
 
 
-<label style="margin-top:18px;">
-Product Description
-</label>
+<div class="form-group">
+
+<label>Product Description</label>
 
 <textarea
 id="productDescription"
 rows="3"
-placeholder="Handmade customised product...">
-</textarea>
+placeholder="Handmade customised product..."></textarea>
+
+</div>
 
 
-<button
-class="main-btn"
-onclick="addProduct()">
-
+<button class="main-btn" onclick="addProduct()">
 🛍️ Add Product
-
 </button>
 
 </div>
 
 
-<div
-class="products"
-id="productList">
+<div class="products" id="productList">
 
 </div>
 
@@ -985,7 +1346,7 @@ id="productList">
 
 
 <!-- =========================
-     TRUST & FRAUD AWARENESS
+     TRUST
 ========================= -->
 
 <section id="trust" class="trust-section">
@@ -1004,7 +1365,6 @@ Smart business also means making safe and informed decisions.
 
 
 <div class="cards">
-
 
 <div class="card">
 
@@ -1047,7 +1407,6 @@ transactions or accepting unknown offers.
 
 </div>
 
-
 </div>
 
 
@@ -1066,7 +1425,7 @@ It does not label a person or company fraudulent without evidence.
 
 
 <!-- =========================
-     BUSINESS ROADMAP
+     ROADMAP
 ========================= -->
 
 <section>
@@ -1086,94 +1445,53 @@ A simple journey from discovering a skill to growing a business.
 
 <div class="roadmap">
 
-
 <div class="step">
-
 <div class="step-number">1</div>
-
 <h3>🎨 Identify Skill</h3>
-
 <p>Find what you are good at.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">2</div>
-
 <h3>💡 Choose Idea</h3>
-
 <p>Select a suitable business idea.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">3</div>
-
 <h3>🛠️ Create Product</h3>
-
 <p>Turn your skill into a product or service.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">4</div>
-
 <h3>🧮 Calculate Cost</h3>
-
 <p>Understand your actual cost.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">5</div>
-
 <h3>💰 Decide Price</h3>
-
 <p>Set a transparent price estimate.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">6</div>
-
 <h3>🛒 Enter Market</h3>
-
 <p>Showcase your product.</p>
-
 </div>
 
-
 <div class="step">
-
 <div class="step-number">7</div>
-
 <h3>👥 Find Customers</h3>
-
 <p>Connect with potential customers.</p>
-
 </div>
-
 
 <div class="step">
-
 <div class="step-number">8</div>
-
 <h3>🚀 Grow</h3>
-
 <p>Improve and expand your business.</p>
-
 </div>
-
 
 </div>
 
@@ -1201,7 +1519,6 @@ in one place.
 
 
 <div class="cards">
-
 
 <div class="card">
 
@@ -1324,418 +1641,143 @@ The current working prototype is developed using:
 <div class="tech-box">
 
 <div class="tech">🌐 HTML</div>
-
 <div class="tech">🎨 CSS</div>
-
 <div class="tech">⚙️ JavaScript</div>
 
 </div>
 
 </section>
-<!-- =========================
-     PART 3 : EXTRA CSS
-========================= -->
-
-<style>
-.tool-box{
-  background:#fffaf0;
-  padding:25px;
-  border-radius:18px;
-  margin:25px 0;
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
-}
-
-.form-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  margin:20px 0;
-}
-
-.form-grid input,
-.form-grid select,
-.market-form input,
-.market-form textarea{
-  width:100%;
-  padding:13px;
-  border:1px solid #d8c7a5;
-  border-radius:10px;
-  font-size:15px;
-}
-
-.main-btn{
-  border:none;
-  padding:13px 22px;
-  border-radius:25px;
-  cursor:pointer;
-  font-weight:bold;
-  margin:5px;
-  background:#7b1e3a;
-  color:white;
-}
-
-.main-btn:hover{
-  transform:translateY(-2px);
-  opacity:.9;
-}
-
-.result,
-.output-box{
-  margin-top:20px;
-  padding:18px;
-  border-radius:14px;
-  background:#f4ead7;
-  font-size:17px;
-  line-height:1.7;
-}
-
-.calculator,
-.calculator-section{
-  margin:25px 0;
-}
-
-.dashboard{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:15px;
-  margin-top:20px;
-}
-
-.stat{
-  background:#fff;
-  padding:20px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-
-.stat-icon{
-  font-size:30px;
-}
-
-.marketplace-section{
-  margin-top:25px;
-}
-
-.market-form{
-  background:#fffaf0;
-  padding:20px;
-  border-radius:18px;
-}
-
-.market-form textarea{
-  min-height:100px;
-  resize:vertical;
-  margin-top:10px;
-}
-
-.market-title{
-  margin-bottom:15px;
-}
-
-.products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-  margin-top:25px;
-}
-
-.product{
-  background:white;
-  border-radius:18px;
-  overflow:hidden;
-  box-shadow:0 7px 22px rgba(0,0,0,.10);
-}
-
-.product img{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-}
-
-.product-content{
-  padding:18px;
-}
-
-.price{
-  font-size:21px;
-  font-weight:bold;
-  margin:8px 0;
-}
-
-.whatsapp{
-  display:inline-block;
-  text-decoration:none;
-  padding:10px 15px;
-  border-radius:20px;
-  background:#25D366;
-  color:white;
-  font-weight:bold;
-  margin-top:10px;
-}
-
-.delete-btn{
-  border:none;
-  background:#8b0000;
-  color:white;
-  padding:8px 12px;
-  border-radius:15px;
-  margin-top:10px;
-  cursor:pointer;
-}
-
-.trust-section{
-  padding:25px;
-  background:#fffaf0;
-  border-radius:18px;
-  margin-top:25px;
-}
-
-.trust-note{
-  background:#f4ead7;
-  padding:15px;
-  border-radius:12px;
-  margin-top:15px;
-}
-
-.roadmap{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
-  gap:15px;
-  margin-top:25px;
-}
-
-.step{
-  background:#fff;
-  padding:20px;
-  border-radius:15px;
-  text-align:center;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-
-.step-number{
-  width:40px;
-  height:40px;
-  border-radius:50%;
-  background:#7b1e3a;
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  margin:0 auto 10px;
-  font-weight:bold;
-}
-
-.innovation{
-  padding:25px;
-  background:#fffaf0;
-  border-radius:18px;
-}
-
-.usp{
-  padding:20px;
-  margin-top:20px;
-  border-left:5px solid #7b1e3a;
-  background:#f4ead7;
-  font-weight:bold;
-  font-size:18px;
-}
-
-.tech-section{
-  margin-top:25px;
-}
-
-.tech-box{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-  gap:15px;
-}
-
-.tech{
-  background:white;
-  padding:20px;
-  text-align:center;
-  border-radius:15px;
-  box-shadow:0 5px 18px rgba(0,0,0,.08);
-}
-
-.future-box{
-  background:linear-gradient(135deg,#fff8e8,#f3e3c1);
-  padding:25px;
-  border-radius:20px;
-  margin-top:25px;
-}
-
-.future-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(190px,1fr));
-  gap:15px;
-  margin-top:20px;
-}
-
-.future-card{
-  background:white;
-  padding:18px;
-  border-radius:15px;
-  box-shadow:0 5px 18px rgba(0,0,0,.07);
-}
-
-.qr-section{
-  text-align:center;
-  padding:35px 20px;
-  background:#fffaf0;
-  border-radius:20px;
-  margin-top:30px;
-}
-
-.qr-section img{
-  width:190px;
-  max-width:80%;
-  margin:20px auto;
-  display:block;
-  border:8px solid white;
-  box-shadow:0 5px 20px rgba(0,0,0,.15);
-}
-
-footer{
-  text-align:center;
-  padding:30px 15px;
-  margin-top:30px;
-  background:#4b1024;
-  color:white;
-}
-
-@media(max-width:600px){
-  .form-grid{
-    grid-template-columns:1fr;
-  }
-
-  .products{
-    grid-template-columns:1fr;
-  }
-
-  .main-btn{
-    width:100%;
-    margin:5px 0;
-  }
-}
-</style>
 
 
 <!-- =========================
-     FUTURE SCOPE
+     FUTURE
 ========================= -->
 
 <section id="future" class="future-box">
 
-  <h2>🚀 Future Scope</h2>
+<div class="heading">
 
-  <p>
-    Currently, Skill2Biz is a working prototype.
-    In future, I want to develop it into a complete
-    platform with advanced business and marketplace features.
-  </p>
+<span>FUTURE SCOPE</span>
 
-  <div class="future-grid">
+<h2>🚀 Future Scope</h2>
 
-    <div class="future-card">
-      <h3>🤖 AI Business Advisor</h3>
-      <p>
-        Personalized business ideas based on skill,
-        budget, time and location.
-      </p>
-    </div>
+<p>
+Currently, Skill2Biz is a working prototype.
+In future, I want to develop it into a complete platform.
+</p>
 
-    <div class="future-card">
-      <h3>🛒 Advanced Marketplace</h3>
-      <p>
-        Search, categories, reviews, wishlist and
-        order requests.
-      </p>
-    </div>
+</div>
 
-    <div class="future-card">
-      <h3>✅ Seller Verification</h3>
-      <p>
-        Verified sellers and reviews to improve
-        customer trust.
-      </p>
-    </div>
 
-    <div class="future-card">
-      <h3>💳 Secure Payments</h3>
-      <p>
-        Secure online payment and order system.
-      </p>
-    </div>
+<div class="future-grid">
 
-    <div class="future-card">
-      <h3>🚚 Delivery Support</h3>
-      <p>
-        Delivery assistance for products sold
-        through the marketplace.
-      </p>
-    </div>
+<div class="future-card">
+<h3>🤖 AI Business Advisor</h3>
+<p>
+Personalized business ideas based on skill,
+budget, time and location.
+</p>
+</div>
 
-    <div class="future-card">
-      <h3>📍 Local Market Matching</h3>
-      <p>
-        Connect sellers with suitable local
-        customers and markets.
-      </p>
-    </div>
 
-    <div class="future-card">
-      <h3>📊 Business Dashboard</h3>
-      <p>
-        Track orders, sales, revenue, profit
-        estimates and growth.
-      </p>
-    </div>
+<div class="future-card">
+<h3>🛒 Advanced Marketplace</h3>
+<p>
+Search, categories, reviews, wishlist and
+order requests.
+</p>
+</div>
 
-    <div class="future-card">
-      <h3>📱 Mobile Application</h3>
-      <p>
-        A dedicated Android/iOS application
-        for easier access.
-      </p>
-    </div>
 
-    <div class="future-card">
-      <h3>🌐 Multilingual Support</h3>
-      <p>
-        Marathi, English and more Indian languages.
-      </p>
-    </div>
+<div class="future-card">
+<h3>✅ Seller Verification</h3>
+<p>
+Verified sellers and reviews to improve
+customer trust.
+</p>
+</div>
 
-  </div>
+
+<div class="future-card">
+<h3>💳 Secure Payments</h3>
+<p>
+Secure online payment and order system.
+</p>
+</div>
+
+
+<div class="future-card">
+<h3>🚚 Delivery Support</h3>
+<p>
+Delivery assistance for products sold
+through the marketplace.
+</p>
+</div>
+
+
+<div class="future-card">
+<h3>📍 Local Market Matching</h3>
+<p>
+Connect sellers with suitable local
+customers and markets.
+</p>
+</div>
+
+
+<div class="future-card">
+<h3>📊 Business Dashboard</h3>
+<p>
+Track orders, sales, revenue, profit
+estimates and growth.
+</p>
+</div>
+
+
+<div class="future-card">
+<h3>📱 Mobile Application</h3>
+<p>
+A dedicated Android/iOS application
+for easier access.
+</p>
+</div>
+
+
+<div class="future-card">
+<h3>🌐 Multilingual Support</h3>
+<p>
+Marathi, English and more Indian languages.
+</p>
+</div>
+
+</div>
 
 </section>
 
 
 <!-- =========================
-     QR CODE
+     QR
 ========================= -->
 
 <section id="qr" class="qr-section">
 
-  <h2>📱 Scan to Explore Skill2Biz</h2>
+<h2>📱 Scan to Explore Skill2Biz</h2>
 
-  <p>
-    Scan this QR code to open the working
-    Skill2Biz prototype.
-  </p>
+<p>
+Scan this QR code to open the working
+Skill2Biz prototype.
+</p>
 
-  <img
-    src="Skill2Biz_Website_QR-1.png"
-    alt="Skill2Biz Website QR Code"
-  >
+<img
+src="Skill2Biz_Website_QR-1.png"
+alt="Skill2Biz Website QR Code"
+onerror="this.style.display='none';"
+>
 
-  <h3>Skill2Biz</h3>
+<h3>Skill2Biz</h3>
 
-  <p>
-    Scan → Try our working prototype
-  </p>
+<p>
+Scan → Try our working prototype
+</p>
 
 </section>
 
@@ -1746,21 +1788,21 @@ footer{
 
 <footer>
 
-  <h2>💡 Skill2Biz</h2>
+<h2>💡 Skill2Biz</h2>
 
-  <p>
-    Converting Skills into Business Opportunities
-  </p>
+<p>
+Converting Skills into Business Opportunities
+</p>
 
-  <p>
-    Skill → Product → Market → Sale → Business Growth
-  </p>
+<p>
+Skill → Product → Market → Sale → Business Growth
+</p>
 
-  <br>
+<br>
 
-  <p>
-    © 2026 Skill2Biz | Avishkar Project
-  </p>
+<p>
+© 2026 Skill2Biz | Avishkar Project
+</p>
 
 </footer>
 
@@ -1771,264 +1813,403 @@ footer{
 
 <script>
 
+/* =========================
+   GLOBAL
+========================= */
+
 let selectedSkill = "";
 
 
-// -------------------------
-// SKILL SELECTION
-// -------------------------
+/* =========================
+   SKILL SELECTION
+========================= */
 
 function selectSkill(skill, element){
 
   selectedSkill = skill;
 
-  document.querySelectorAll(".skill-card").forEach(card => {
-    card.classList.remove("selected");
+  document.querySelectorAll(".skill").forEach(card => {
+    card.classList.remove("active");
   });
 
   if(element){
-    element.classList.add("selected");
+    element.classList.add("active");
   }
 
-  let skillInput = document.getElementById("businessSkill");
+  const skillInput =
+    document.getElementById("businessSkill");
 
   if(skillInput){
-    skillInput.value = skill;
+
+    const value = skill.toLowerCase();
+
+    skillInput.value = value;
   }
+
+
+  const selectedBox =
+    document.getElementById("selectedSkill");
+
+  if(selectedBox){
+
+    selectedBox.innerHTML = `
+
+      <h3>✅ Selected Skill: ${skill}</h3>
+
+      <p>
+        Now enter your budget and available time
+        in the Business Finder.
+      </p>
+
+    `;
+
+  }
+
 }
 
 
-// -------------------------
-// BUSINESS FINDER
-// -------------------------
+/* =========================
+   BUSINESS FINDER
+========================= */
 
 function findBusiness(){
 
-  let skill =
-    document.getElementById("businessSkill").value.trim();
+  const skill =
+    document.getElementById("businessSkill").value;
 
-  let budget =
-    Number(document.getElementById("businessBudget").value);
+  const budget =
+    Number(document.getElementById("budget").value) || 0;
 
-  let time =
-    document.getElementById("businessTime").value;
+  const time =
+    document.getElementById("time").value;
 
-  let result =
+  const result =
     document.getElementById("businessResult");
+
 
   if(skill === ""){
 
     result.innerHTML =
-      "⚠️ Please enter or select your skill.";
+      "<h3>⚠️ Please select your skill.</h3>";
 
     return;
   }
 
+
   let idea = "Skill-based service";
 
-  let lowerSkill = skill.toLowerCase();
 
-  if(lowerSkill.includes("crochet")){
-    idea = "Crochet Keychains, Bookmarks & Handmade Gifts";
-  }
-  else if(lowerSkill.includes("drawing")){
-    idea = "Handmade Cards, Digital Art & Custom Designs";
-  }
-  else if(lowerSkill.includes("baking") ||
-          lowerSkill.includes("cooking")){
-    idea = "Home-based Food / Pre-order Business";
-  }
-  else if(lowerSkill.includes("tailor") ||
-          lowerSkill.includes("stitch")){
-    idea = "Custom Stitching & Alteration Service";
-  }
-  else if(lowerSkill.includes("design") ||
-          lowerSkill.includes("canva")){
-    idea = "Poster, Invitation & Social Media Design";
-  }
-  else if(lowerSkill.includes("photo")){
-    idea = "Mobile Product Photography Service";
-  }
-  else if(lowerSkill.includes("teach")){
-    idea = "Home Tuition / Online Tutoring";
-  }
-  else if(lowerSkill.includes("computer") ||
-          lowerSkill.includes("typing")){
-    idea = "Typing, Document & Basic Computer Service";
+  if(skill === "crochet"){
+
+    idea =
+      "Crochet Keychains, Bookmarks & Handmade Gifts";
+
   }
 
-  let budgetText =
+  else if(skill === "drawing"){
+
+    idea =
+      "Handmade Cards, Digital Art & Custom Designs";
+
+  }
+
+  else if(skill === "writing"){
+
+    idea =
+      "Content Writing, Invitations & Greeting Cards";
+
+  }
+
+  else if(skill === "teaching"){
+
+    idea =
+      "Home Tuition / Online Tutoring";
+
+  }
+
+  else if(skill === "crafting"){
+
+    idea =
+      "Handmade Gifts & Decorative Products";
+
+  }
+
+  else if(skill === "photography"){
+
+    idea =
+      "Mobile Product Photography Service";
+
+  }
+
+  else if(skill === "computer"){
+
+    idea =
+      "Typing, Documents & Basic Computer Services";
+
+  }
+
+  else if(skill === "designing"){
+
+    idea =
+      "Poster, Invitation & Social Media Design";
+
+  }
+
+  else if(skill === "cooking"){
+
+    idea =
+      "Home-based Food / Pre-order Business";
+
+  }
+
+  else if(skill === "social"){
+
+    idea =
+      "Social Media Management for Local Businesses";
+
+  }
+
+
+  const budgetText =
     budget > 0
     ? "₹" + budget
     : "Low / Existing Resources";
 
+
   result.innerHTML = `
+
     <h3>💡 Recommended Business</h3>
 
-    <p><strong>Skill:</strong> ${skill}</p>
-
-    <p><strong>Available Budget:</strong>
-    ${budgetText}</p>
-
-    <p><strong>Available Time:</strong>
-    ${time || "Flexible"}</p>
-
-    <p><strong>Business Idea:</strong>
-    ${idea}</p>
+    <p>
+      <strong>Skill:</strong>
+      ${skill}
+    </p>
 
     <p>
-      🎯 Start small, test the market and
-      gradually grow your business.
+      <strong>Available Budget:</strong>
+      ${budgetText}
     </p>
+
+    <p>
+      <strong>Available Time:</strong>
+      ${time || "Flexible"}
+    </p>
+
+    <p>
+      <strong>Business Idea:</strong>
+      ${idea}
+    </p>
+
+    <p>
+      🎯 Start small, test the market and gradually grow.
+    </p>
+
   `;
+
 }
 
 
-// -------------------------
-// DEMO BUSINESS
-// -------------------------
+/* =========================
+   DEMO BUSINESS
+========================= */
 
 function demoBusiness(){
 
   document.getElementById("businessSkill").value =
-    "Crochet";
+    "crochet";
 
-  document.getElementById("businessBudget").value =
+  document.getElementById("budget").value =
     "500";
 
-  document.getElementById("businessTime").value =
+  document.getElementById("time").value =
     "2–4 hours/day";
 
   findBusiness();
+
 }
 
 
-// -------------------------
-// PRICE CALCULATOR
-// -------------------------
+/* =========================
+   PRICING CALCULATOR
+========================= */
 
 function calculatePrice(){
 
-  let material =
-    Number(document.getElementById("materialCost").value) || 0;
+  const material =
+    Number(document.getElementById("material").value) || 0;
 
-  let packaging =
-    Number(document.getElementById("packagingCost").value) || 0;
+  const packaging =
+    Number(document.getElementById("packaging").value) || 0;
 
-  let other =
-    Number(document.getElementById("otherCost").value) || 0;
+  const other =
+    Number(document.getElementById("other").value) || 0;
 
-  let labour =
-    Number(document.getElementById("labourCost").value) || 0;
+  const labour =
+    Number(document.getElementById("labour").value) || 0;
 
-  let desiredProfit =
+  const desiredProfit =
     Number(document.getElementById("desiredProfit").value) || 0;
 
-  let total =
+
+  const total =
     material +
     packaging +
     other +
     labour;
 
-  let suggested =
+
+  const suggested =
     total +
     desiredProfit;
 
-  let output =
-    document.getElementById("priceResult");
+
+  const output =
+    document.getElementById("priceOutput");
+
 
   output.innerHTML = `
+
     <h3>🧮 Pricing Result</h3>
 
-    <p><strong>Total Cost:</strong> ₹${total}</p>
+    <p>
+      <strong>Material Cost:</strong>
+      ₹${material}
+    </p>
 
-    <p><strong>Desired Profit:</strong>
-    ₹${desiredProfit}</p>
+    <p>
+      <strong>Packaging Cost:</strong>
+      ₹${packaging}
+    </p>
 
-    <p><strong>Suggested Selling Price:</strong>
-    ₹${suggested}</p>
+    <p>
+      <strong>Other Cost:</strong>
+      ₹${other}
+    </p>
+
+    <p>
+      <strong>Labour Cost:</strong>
+      ₹${labour}
+    </p>
+
+    <hr>
+
+    <p>
+      <strong>Total Product Cost:</strong>
+      ₹${total}
+    </p>
+
+    <p>
+      <strong>Desired Profit:</strong>
+      ₹${desiredProfit}
+    </p>
+
+    <p>
+      <strong>Suggested Selling Price:</strong>
+      ₹${suggested}
+    </p>
 
     <p>
       💡 This is an estimate. Actual selling price
-      depends on the market and customer demand.
+      depends on market demand and customer preferences.
     </p>
+
   `;
+
 }
 
 
-// -------------------------
-// PROFIT SIMULATOR
-// -------------------------
+/* =========================
+   PROFIT SIMULATOR
+========================= */
 
 function calculateProfit(){
 
-  let sellingPrice =
+  const sellingPrice =
     Number(document.getElementById("sellingPrice").value) || 0;
 
-  let totalCost =
+  const totalCost =
     Number(document.getElementById("totalCost").value) || 0;
 
-  let quantity =
+  const quantity =
     Number(document.getElementById("quantity").value) || 0;
 
-  let profitPerProduct =
+
+  const profitPerProduct =
     sellingPrice - totalCost;
 
-  let totalProfit =
+
+  const totalProfit =
     profitPerProduct * quantity;
 
-  let revenue =
+
+  const revenue =
     sellingPrice * quantity;
 
-  let output =
-    document.getElementById("profitResult");
+
+  const output =
+    document.getElementById("profitOutput");
+
 
   output.innerHTML = `
+
     <h3>📊 Profit Simulation</h3>
 
-    <p><strong>Profit per Product:</strong>
-    ₹${profitPerProduct}</p>
+    <p>
+      <strong>Profit per Product:</strong>
+      ₹${profitPerProduct}
+    </p>
 
-    <p><strong>Total Revenue:</strong>
-    ₹${revenue}</p>
+    <p>
+      <strong>Total Revenue:</strong>
+      ₹${revenue}
+    </p>
 
-    <p><strong>Estimated Total Profit:</strong>
-    ₹${totalProfit}</p>
+    <p>
+      <strong>Products Sold:</strong>
+      ${quantity}
+    </p>
+
+    <p>
+      <strong>Estimated Total Profit:</strong>
+      ₹${totalProfit}
+    </p>
 
     <p>
       ⚠️ This is only an estimate and does not
       guarantee actual profit.
     </p>
+
   `;
+
 }
 
 
-// -------------------------
-// MARKETPLACE
-// -------------------------
+/* =========================
+   MARKETPLACE
+========================= */
 
 function addProduct(){
 
-  let name =
+  const name =
     document.getElementById("productName").value.trim();
 
-  let price =
+  const price =
     document.getElementById("productPrice").value;
 
-  let description =
+  const description =
     document.getElementById("productDescription").value.trim();
 
-  let seller =
+  const seller =
     document.getElementById("sellerName").value.trim();
 
-  let location =
+  const location =
     document.getElementById("sellerLocation").value.trim();
 
-  let contact =
+  const contact =
     document.getElementById("sellerContact").value.trim();
 
-  let photo =
-    document.getElementById("productPhoto").value.trim();
+  const imageFile =
+    document.getElementById("productImage").files[0];
 
 
   if(
@@ -2049,12 +2230,87 @@ function addProduct(){
   let number =
     contact.replace(/\D/g,"");
 
+
   if(number.length === 10){
-    number = "91" + number;
+
+    number =
+      "91" + number;
+
   }
 
 
-  let product = {
+  if(number.length < 12){
+
+    alert(
+      "⚠️ Please enter a valid WhatsApp number."
+    );
+
+    return;
+  }
+
+
+  /*
+     Product photo is converted into Base64
+     so it can be stored in localStorage.
+  */
+
+  if(imageFile){
+
+    const reader =
+      new FileReader();
+
+
+    reader.onload = function(event){
+
+      saveProduct(
+        name,
+        price,
+        description,
+        seller,
+        location,
+        number,
+        event.target.result
+      );
+
+    };
+
+
+    reader.readAsDataURL(imageFile);
+
+  }
+
+  else{
+
+    saveProduct(
+      name,
+      price,
+      description,
+      seller,
+      location,
+      number,
+      ""
+    );
+
+  }
+
+}
+
+
+/* =========================
+   SAVE PRODUCT
+========================= */
+
+function saveProduct(
+  name,
+  price,
+  description,
+  seller,
+  location,
+  contact,
+  photo
+){
+
+  const product = {
 
     id: Date.now(),
 
@@ -2068,7 +2324,7 @@ function addProduct(){
 
     location: location,
 
-    contact: number,
+    contact: contact,
 
     photo: photo
 
@@ -2084,10 +2340,24 @@ function addProduct(){
   products.push(product);
 
 
-  localStorage.setItem(
-    "skill2bizProducts",
-    JSON.stringify(products)
-  );
+  try{
+
+    localStorage.setItem(
+      "skill2bizProducts",
+      JSON.stringify(products)
+    );
+
+  }
+
+  catch(error){
+
+    alert(
+      "⚠️ Image is too large. Please use a smaller image."
+    );
+
+    return;
+
+  }
 
 
   displayProducts();
@@ -2099,23 +2369,31 @@ function addProduct(){
   document.getElementById("sellerName").value = "";
   document.getElementById("sellerLocation").value = "";
   document.getElementById("sellerContact").value = "";
-  document.getElementById("productPhoto").value = "";
+  document.getElementById("productImage").value = "";
 
 
-  alert("✅ Product added to Skill2Biz Marketplace!");
+  alert(
+    "✅ Product added successfully to Skill2Biz Marketplace!"
+  );
+
 }
 
 
-// -------------------------
-// DISPLAY PRODUCTS
-// -------------------------
+/* =========================
+   DISPLAY PRODUCTS
+========================= */
 
 function displayProducts(){
 
-  let container =
-    document.getElementById("products");
+  const container =
+    document.getElementById("productList");
 
-  if(!container) return;
+
+  if(!container){
+
+    return;
+
+  }
 
 
   let products =
@@ -2127,26 +2405,35 @@ function displayProducts(){
   if(products.length === 0){
 
     container.innerHTML = `
-      <div class="product-content">
-        <h3>🛍️ No products yet</h3>
 
-        <p>
-          Add your first product to showcase it
-          in the Skill2Biz Marketplace.
-        </p>
+      <div class="product">
+
+        <div class="product-content">
+
+          <h3>🛍️ No products yet</h3>
+
+          <p>
+            Add your first product to showcase it
+            in the Skill2Biz Marketplace.
+          </p>
+
+        </div>
+
       </div>
+
     `;
 
     return;
+
   }
 
 
   container.innerHTML = "";
 
 
-  products.forEach(product => {
+  products.forEach(function(product){
 
-    let image =
+    const image =
       product.photo ||
       "https://via.placeholder.com/500x300?text=Skill2Biz+Product";
 
@@ -2157,19 +2444,24 @@ function displayProducts(){
 
         <img
           src="${image}"
-          alt="${product.name}"
+          alt="Product"
           onerror="this.src='https://via.placeholder.com/500x300?text=Skill2Biz+Product'"
         >
 
+
         <div class="product-content">
 
-          <h3>${product.name}</h3>
+          <h3>
+            ${product.name}
+          </h3>
 
           <div class="price">
             ₹${product.price}
           </div>
 
-          <p>${product.description}</p>
+          <p>
+            ${product.description}
+          </p>
 
           <p>
             👤 <strong>Seller:</strong>
@@ -2181,15 +2473,19 @@ function displayProducts(){
             ${product.location}
           </p>
 
+
           <a
             class="whatsapp"
             href="https://wa.me/${product.contact}"
             target="_blank"
+            rel="noopener"
           >
             💬 Contact Seller
           </a>
 
+
           <br>
+
 
           <button
             class="delete-btn"
@@ -2203,13 +2499,15 @@ function displayProducts(){
       </div>
 
     `;
+
   });
+
 }
 
 
-// -------------------------
-// DELETE PRODUCT
-// -------------------------
+/* =========================
+   DELETE PRODUCT
+========================= */
 
 function deleteProduct(id){
 
@@ -2220,7 +2518,11 @@ function deleteProduct(id){
 
 
   products =
-    products.filter(product => product.id !== id);
+    products.filter(function(product){
+
+      return product.id !== id;
+
+    });
 
 
   localStorage.setItem(
@@ -2230,41 +2532,39 @@ function deleteProduct(id){
 
 
   displayProducts();
+
 }
 
 
-// -------------------------
-// LANGUAGE BUTTONS
-// -------------------------
+/* =========================
+   LANGUAGE
+========================= */
 
-function englishLanguage(){
+function showEnglish(){
 
   alert(
-    "English language selected.\n\n" +
-    "The complete multilingual version can be " +
-    "added in the future."
+    "English language selected."
   );
 
 }
 
 
-function marathiLanguage(){
+function showMarathi(){
 
   alert(
-    "मराठी भाषा निवडली आहे.\n\n" +
-    "पूर्ण multilingual translation future scope मध्ये आहे."
+    "मराठी भाषा निवडली आहे."
   );
 
 }
 
 
-// -------------------------
-// LOAD PRODUCTS
-// -------------------------
+/* =========================
+   LOAD
+========================= */
 
 displayProducts();
 
 </script>
 
 </body>
-  </html>
+</html>
