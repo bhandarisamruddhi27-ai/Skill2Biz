@@ -2207,84 +2207,178 @@ function findBusiness(){
   }
 
 
-  let idea = "Skill-based service";
+  if(budget <= 0){
 
+    result.innerHTML =
+      "<h3>⚠️ Please enter your budget.</h3>";
+
+    return;
+  }
+
+
+  if(time === ""){
+
+    result.innerHTML =
+      "<h3>⚠️ Please select your available time.</h3>";
+
+    return;
+  }
+
+
+  let idea = "";
+  let startCost = "";
+  let earning = "";
+  let firstStep = "";
+
+
+  /* CROCHET */
 
   if(skill === "crochet"){
 
-    idea =
-      "Crochet Keychains, Bookmarks & Handmade Gifts";
+    if(budget < 300){
+
+      idea = "Crochet Bookmarks & Small Keychains";
+      startCost = "₹200 – ₹300";
+      earning = "₹500 – ₹1,000";
+
+    }else{
+
+      idea = "Crochet Keychains, Gifts & Accessories";
+      startCost = "₹300 – ₹800";
+      earning = "₹1,000 – ₹3,000";
+
+    }
+
+    firstStep =
+      "Make 5 sample products → Take photos → Share on WhatsApp/Instagram → Start taking orders";
 
   }
+
+
+  /* DRAWING */
 
   else if(skill === "drawing"){
 
-    idea =
-      "Handmade Cards, Digital Art & Custom Designs";
+    idea = "Custom Cards & Digital Art";
+    startCost = "₹100 – ₹1,000";
+    earning = "₹500 – ₹3,000";
+
+    firstStep =
+      "Create sample designs → Make a small portfolio → Share online → Accept custom orders";
 
   }
+
+
+  /* WRITING */
 
   else if(skill === "writing"){
 
-    idea =
-      "Content Writing, Invitations & Greeting Cards";
+    idea = "Content Writing & Invitation Writing";
+    startCost = "₹0 – ₹500";
+    earning = "₹1,000 – ₹5,000";
+
+    firstStep =
+      "Create 3 writing samples → Build a portfolio → Contact local businesses → Take projects";
 
   }
+
+
+  /* TEACHING */
 
   else if(skill === "teaching"){
 
-    idea =
-      "Home Tuition / Online Tutoring";
+    idea = "Home Tuition / Online Tutoring";
+    startCost = "₹0 – ₹500";
+    earning = "₹1,000 – ₹5,000";
+
+    firstStep =
+      "Choose a subject → Prepare sample notes → Tell people about your service → Start with 1–2 students";
 
   }
+
+
+  /* CRAFTING */
 
   else if(skill === "crafting"){
 
-    idea =
-      "Handmade Gifts & Decorative Products";
+    idea = "Handmade Gifts & Decorative Products";
+    startCost = "₹200 – ₹1,000";
+    earning = "₹1,000 – ₹4,000";
+
+    firstStep =
+      "Create sample products → Take photos → Set prices → Promote locally and online";
 
   }
+
+
+  /* PHOTOGRAPHY */
 
   else if(skill === "photography"){
 
-    idea =
-      "Mobile Product Photography Service";
+    idea = "Mobile Product Photography Service";
+    startCost = "₹0 – ₹500";
+    earning = "₹500 – ₹3,000";
+
+    firstStep =
+      "Create sample photos → Build portfolio → Contact local sellers → Offer photography service";
 
   }
+
+
+  /* COMPUTER */
 
   else if(skill === "computer"){
 
-    idea =
-      "Typing, Documents & Basic Computer Services";
+    idea = "Typing, Documents & Basic Computer Services";
+    startCost = "₹0 – ₹1,000";
+    earning = "₹1,000 – ₹5,000";
+
+    firstStep =
+      "Choose services → Create sample work → Tell local people → Start taking small orders";
 
   }
+
+
+  /* DESIGNING */
 
   else if(skill === "designing"){
 
-    idea =
-      "Poster, Invitation & Social Media Design";
+    idea = "Poster, Invitation & Social Media Design";
+    startCost = "₹0 – ₹500";
+    earning = "₹1,000 – ₹5,000";
+
+    firstStep =
+      "Create 5 sample designs → Make a portfolio → Promote your service → Take client orders";
 
   }
+
+
+  /* COOKING */
 
   else if(skill === "cooking"){
 
-    idea =
-      "Home-based Food / Pre-order Business";
+    idea = "Home-based Food / Pre-order Business";
+    startCost = "₹300 – ₹1,500";
+    earning = "₹1,000 – ₹5,000";
+
+    firstStep =
+      "Choose 1–2 products → Calculate cost → Take sample orders → Collect customer feedback";
 
   }
+
+
+  /* SOCIAL MEDIA */
 
   else if(skill === "social"){
 
-    idea =
-      "Social Media Management for Local Businesses";
+    idea = "Social Media Management for Local Businesses";
+    startCost = "₹0 – ₹500";
+    earning = "₹1,000 – ₹6,000";
+
+    firstStep =
+      "Create sample posts → Approach local businesses → Offer a small package → Build clients";
 
   }
-
-
-  const budgetText =
-    budget > 0
-    ? "₹" + budget
-    : "Low / Existing Resources";
 
 
   result.innerHTML = `
@@ -2292,27 +2386,47 @@ function findBusiness(){
     <h3>💡 Recommended Business</h3>
 
     <p>
-      <strong>Skill:</strong>
+      <strong>🎯 Skill:</strong>
       ${skill}
     </p>
 
     <p>
-      <strong>Available Budget:</strong>
-      ${budgetText}
+      <strong>💰 Your Budget:</strong>
+      ₹${budget}
     </p>
 
     <p>
-      <strong>Available Time:</strong>
-      ${time || "Flexible"}
+      <strong>⏰ Available Time:</strong>
+      ${time}
     </p>
 
+    <hr>
+
     <p>
-      <strong>Business Idea:</strong>
+      <strong>🚀 Business Idea:</strong>
       ${idea}
     </p>
 
     <p>
-      🎯 Start small, test the market and gradually grow.
+      <strong>💵 Starting Cost:</strong>
+      ${startCost}
+    </p>
+
+    <p>
+      <strong>📈 Possible Earning:</strong>
+      ${earning}
+    </p>
+
+    <hr>
+
+    <h3>🗺️ First Step</h3>
+
+    <p>
+      ${firstStep}
+    </p>
+
+    <p>
+      💡 Start small, test the market and gradually grow.
     </p>
 
   `;
